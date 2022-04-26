@@ -1,0 +1,5 @@
+"incident_id","ped_id","name","sex","age","age_range","status","location","revision_id"
+"1","1","","M","","Early 30s","dead","road","1"
+"2","1","","F","","In her 70s","critical injury","crosswalk","1"
+"3","1","","M","12","","minor injury","residential street","1"
+"3","2","","M","8","","unharmed","residential street","1"

@@ -1,0 +1,6 @@
+piéton
+par une voiture
+par un autobus
+par un camion
+cycliste
+happé

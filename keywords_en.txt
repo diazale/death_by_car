@@ -1,0 +1,13 @@
+struck
+pedestrian
+cyclist
+bicycle
+driver
+by vehicle
+by truck
+by car
+by bus
+by a vehicle
+by a truck
+by a car
+by a bus

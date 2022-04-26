@@ -1,0 +1,4 @@
+"incident_id","vehicle_id","type","make","model","year","notes"
+"1","1","car","Mazda","","","image in sources"
+"2","1","SUV","Subaru","","","image in sources"
+"3","1","","","","",""
