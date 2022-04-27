@@ -1,0 +1,62 @@
+---
+title: "Counting"
+author: "Alex Diaz-Papkovich"
+date: "26/04/2022"
+output: html_document
+---
+
+```{r Import data}
+source("read_in_data.R")
+```
+
+```{r Find the total number of deaths}
+# Note this doesn't account for revision IDs, might need that in the future
+# Get the total deaths
+total_cyc_deaths <- sum(cyclists$status=="dead")
+total_ped_deaths <- sum(pedestrians$status=="dead")
+total_oth_deaths <- sum(others$status=="dead")
+
+total_deaths <- total_cyc_deaths + total_ped_deaths + total_oth_deaths
+
+# Get the total injuries
+# Search for "injury"
+total_cyc_injuries <- sum(grepl("injury", cyclists$status, fixed = TRUE))
+total_ped_injuries <- sum(grepl("injury", pedestrians$status, fixed = TRUE))
+total_oth_injuries <- sum(grepl("injury", others$status, fixed = TRUE))
+
+total_injuries <- total_cyc_injuries + total_ped_injuries + total_oth_injuries
+
+# Get total incidents
+total_incidents <- length(unique(incidents$incident_id))
+
+# Get total victims
+# (Some people may be uninjured but still hit)
+total_cyc_victims <- nrow(cyclists)
+total_ped_victims <- nrow(pedestrians)
+total_oth_victims <- nrow(others)
+
+total_victims <- total_cyc_victims + total_ped_victims + total_oth_victims
+
+comment <- paste(
+  "Since April 25, 2022, drivers have hit ", total_victims, " people with their vehicles, across ", total_incidents, 
+  " incidents, resulting in ", total_deaths, " deaths and ", total_injuries, " injuries.",
+  sep=""
+  )
+
+nchar(comment)
+
+comment <- paste(
+  "Since April 25, 2022, drivers have killed ", total_ped_deaths, " pedestrians and injured ", total_ped_injuries, ".",
+  sep=""
+)
+
+comment <- paste(
+  "Since April 25, 2022, drivers have killed ", total_cyc_deaths, " cyclists and injured ", total_cyc_injuries, ".",
+  sep=""
+)
+
+comment <- paste(
+  "Since April 25, 2022, drivers have killed ", total_oth_deaths, " others (e.g. police officers, construction workers) and injured ", total_oth_injuries, ".",
+  sep=""
+)
+```
