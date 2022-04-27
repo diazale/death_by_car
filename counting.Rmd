@@ -43,20 +43,135 @@ comment <- paste(
   sep=""
   )
 
-nchar(comment)
+comment
 
 comment <- paste(
   "Since April 25, 2022, drivers have killed ", total_ped_deaths, " pedestrians and injured ", total_ped_injuries, ".",
   sep=""
 )
 
+comment
+
 comment <- paste(
   "Since April 25, 2022, drivers have killed ", total_cyc_deaths, " cyclists and injured ", total_cyc_injuries, ".",
   sep=""
 )
 
+comment
+
 comment <- paste(
-  "Since April 25, 2022, drivers have killed ", total_oth_deaths, " others (e.g. police officers, construction workers) and injured ", total_oth_injuries, ".",
+  "Since April 25, 2022, drivers have killed ", total_oth_deaths, " others (e.g. police officers, construction workers) and injured ",
+  total_oth_injuries, ".",
   sep=""
 )
+```
+
+```{r Filter by specific date}
+
+dates <- c("2022-04-26")
+
+# Subset the incidents by the dates desired
+incidents_subset <- subset(incidents, date %in% lubridate::ymd(dates))
+
+cyclists_subset <- cyclists %>%
+  filter(., incident_id %in% incidents_subset$incident_id)
+pedestrians_subset <- pedestrians %>%
+  filter(., incident_id %in% incidents_subset$incident_id)
+others_subset <- others %>%
+  filter(., incident_id %in% incidents_subset$incident_id)
+
+# Get the total deaths
+total_cyc_deaths <- sum(cyclists_subset$status=="dead")
+total_ped_deaths <- sum(pedestrians_subset$status=="dead")
+total_oth_deaths <- sum(others_subset$status=="dead")
+
+total_deaths <- total_cyc_deaths + total_ped_deaths + total_oth_deaths
+
+# Get the total injuries
+# Search for "injury"
+total_cyc_injuries <- sum(grepl("injury", cyclists_subset$status, fixed = TRUE))
+total_ped_injuries <- sum(grepl("injury", pedestrians_subset$status, fixed = TRUE))
+total_oth_injuries <- sum(grepl("injury", others_subset$status, fixed = TRUE))
+
+total_injuries <- total_cyc_injuries + total_ped_injuries + total_oth_injuries
+
+# Get total incidents
+total_incidents <- length(unique(incidents_subset$incident_id))
+
+# Get total victims
+# (Some people may be uninjured but still hit)
+total_cyc_victims <- nrow(cyclists_subset)
+total_ped_victims <- nrow(pedestrians_subset)
+total_oth_victims <- nrow(others_subset)
+
+total_victims <- total_cyc_victims + total_ped_victims + total_oth_victims
+
+comment <- paste(
+  lubridate::wday(dates, label=TRUE, abbr = FALSE), " ", lubridate::month(dates, label=TRUE, abbr=FALSE), " ",
+  lubridate::day(dates), " ", lubridate::year(dates),
+  ": Drivers hit ", total_victims, 
+  ifelse(total_victims==1, " person with", " people with"), " their vehicles, across ", total_incidents,
+  ifelse(total_incidents==1, " incident", " incidents")," resulting in ", total_deaths,
+  ifelse(total_deaths==1, " death and ", " deaths and "), total_injuries,
+  ifelse(total_injuries==1, " injury.", " injuries."),
+  sep=""
+  )
+comment
+
+```
+
+```{r Filter to date range}
+min_date <- "2022-04-25"
+max_date <- "2022-04-26"
+
+# Subset the incidents by the dates desired
+incidents_subset <- subset(incidents, lubridate::ymd(min_date) <= date & date <= lubridate::ymd(max_date))
+
+cyclists_subset <- cyclists %>%
+  filter(., incident_id %in% incidents_subset$incident_id)
+pedestrians_subset <- pedestrians %>%
+  filter(., incident_id %in% incidents_subset$incident_id)
+others_subset <- others %>%
+  filter(., incident_id %in% incidents_subset$incident_id)
+
+# Get the total deaths
+total_cyc_deaths <- sum(cyclists_subset$status=="dead")
+total_ped_deaths <- sum(pedestrians_subset$status=="dead")
+total_oth_deaths <- sum(others_subset$status=="dead")
+
+total_deaths <- total_cyc_deaths + total_ped_deaths + total_oth_deaths
+
+# Get the total injuries
+# Search for "injury"
+total_cyc_injuries <- sum(grepl("injury", cyclists_subset$status, fixed = TRUE))
+total_ped_injuries <- sum(grepl("injury", pedestrians_subset$status, fixed = TRUE))
+total_oth_injuries <- sum(grepl("injury", others_subset$status, fixed = TRUE))
+
+total_injuries <- total_cyc_injuries + total_ped_injuries + total_oth_injuries
+
+# Get total incidents
+total_incidents <- length(unique(incidents_subset$incident_id))
+
+# Get total victims
+# (Some people may be uninjured but still hit)
+total_cyc_victims <- nrow(cyclists_subset)
+total_ped_victims <- nrow(pedestrians_subset)
+total_oth_victims <- nrow(others_subset)
+
+total_victims <- total_cyc_victims + total_ped_victims + total_oth_victims
+
+comment <- paste(
+  lubridate::wday(min_date, label=TRUE, abbr = FALSE), " ", lubridate::month(min_date, label=TRUE, abbr=FALSE), " ",
+  lubridate::day(min_date), " ", lubridate::year(min_date),
+  " to ", lubridate::wday(max_date, label=TRUE, abbr = FALSE), " ", lubridate::month(max_date, label=TRUE, abbr=FALSE), " ",
+  lubridate::day(max_date), " ", lubridate::year(max_date),
+  ": Drivers hit ", total_victims, 
+  ifelse(total_victims==1, " person with", " people with"), " their vehicles, across ", total_incidents,
+  ifelse(total_incidents==1, " incident", " incidents")," causing ", total_deaths,
+  ifelse(total_deaths==1, " death and ", " deaths and "), total_injuries,
+  ifelse(total_injuries==1, " injury.", " injuries."),
+  sep=""
+  )
+comment
+
 ```

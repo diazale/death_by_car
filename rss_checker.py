@@ -72,5 +72,13 @@ if archive:
             w_obj.writerow(murl)
 
         f_obj.close()
+else:
+    # if we don't want to archive, overwrite a temp file if we want ot manually add it later
+    with(open("data/temp_url_file", "w", newline="")) as f_obj:
+        w_obj = writer(f_obj)
 
+        # Append URLs to file
+        for murl in master_urls:
+            w_obj.writerow(murl)
 
+        f_obj.close()
