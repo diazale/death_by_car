@@ -1,2 +1,5 @@
 "incident_id","cyc_id","name","sex","age","age_range","status","location","revision_id","notes"
 "5","1","","M","22","","minor injury","intersection","1","cyclist charged with reckless driving"
+"13","1","","M","39","","life-threatening injury","travelling","1",""
+"14","1","","M","35","","critical injury","sidewalk","1",""
+"17","1","","M","","adult","taken to hospital with injury","intersection","1",""

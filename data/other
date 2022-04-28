@@ -1,2 +1,3 @@
 "incident_id","oth_id","name","sex","age","age_range","status","location","revision_id","notes"
 "4","1","","M","","50s","non life-threatening injury","intersection","1","police officer directing traffic"
+"23","1","","F","","","non life-threatening","highway","1","construction worker"
