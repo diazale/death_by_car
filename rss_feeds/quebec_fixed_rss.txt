@@ -1,0 +1,5 @@
+https://www.journaldemontreal.com/actualite/faits-divers/rss.xml
+https://www.journaldemontreal.com/actualite/transports/rss.xml
+https://www.journaldemontreal.com/actualite/rss.xml
+https://www.journaldequebec.com/rss.xml
+https://www.lapresse.ca/actualites/rss

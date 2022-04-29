@@ -23,7 +23,7 @@ feeds_to_check = {
     "QC":"quebec_fixed_rss.txt",
     "Nitter_fr":"nitter_fr_rss.txt",
     "Nitter_en":"nitter_en_rss.txt"}
-
+#feeds_to_check = {"CBC":"cbc_rss.txt"}
 
 # Import keywords as a list
 keywords_en = [k for k in open("keywords_en.txt", "r").read().rstrip().split("\n")]
@@ -33,34 +33,47 @@ keywords_fr = [k for k in open("keywords_fr.txt", "r").read().rstrip().split("\n
 master_url_file = "data/rss_matches.csv"
 master_urls = []
 
+# If this flag is true, search my various lists of RSS feeds
+specific_news = True
+
+# Flag to check Google News
+google_french = False
+google_english = False
+
 # Search for stories from selected RSS feeds
-for k in feeds_to_check.keys():
-    print(feeds_to_check[k])
-    name = k
-    rss_file = feeds_to_check[k]
+if specific_news:
+    for k in feeds_to_check.keys():
+        print(feeds_to_check[k])
+        name = k
+        rss_file = feeds_to_check[k]
 
-    print("Beginning RSS keyword check for", name)
+        print("Beginning RSS keyword check for", name)
 
-    rss_list = [l for l in open(os.path.join(feed_dir, rss_file), "r").read().rstrip().split("\n")]
+        rss_list = [l for l in open(os.path.join(feed_dir, rss_file), "r").read().rstrip().split("\n")]
 
-    for rss in rss_list:
-        try:
-            feed = feedparser.parse(rss)
+        for rss in rss_list:
+            #print(rss)
 
             try:
-                for entry in feed["entries"]:
-                    # print(entry)
-                    if any(k in entry["title"].lower() for k in keywords_en or \
-                            any(k in entry["link"].lower() for k in keywords_en)):
-                        print()
-                        print("Keyword match:", entry["title"])
-                        print("Link:", entry["link"])
-                        print()
-                        master_urls.append([entry["title"],entry["link"],name,ts])
-            except Exception as e1:
-                print("Exception", e1, "in RSS:", rss)
-        except Exception as e2:
-            print("Exception", e2, "Error with:", rss)
+                feed = feedparser.parse(rss)
+
+                try:
+                    for entry in feed["entries"]:
+                        #debugging...
+                        #if rss=="https://rss.cbc.ca/lineup/canada-sudbury.xml":
+                        #    print(entry["title"])
+                        #    print(entry["link"])
+                        if any(k in entry["title"].lower() for k in keywords_en) or \
+                                any(k in entry["link"].lower() for k in keywords_en):
+                            print()
+                            print("Keyword match:", entry["title"])
+                            print("Link:", entry["link"])
+                            print()
+                            master_urls.append([entry["title"],entry["link"],name,ts])
+                except Exception as e1:
+                    print("Exception", e1, "in RSS:", rss)
+            except Exception as e2:
+                print("Exception", e2, "Error with:", rss)
 
 # Save our results if we want to archive them.
 if archive:
@@ -82,3 +95,61 @@ else:
             w_obj.writerow(murl)
 
         f_obj.close()
+
+
+# Custom google RSS search
+########## Google French ##########
+
+search_keys = ["pi%C3%A9ton","pieton","cyclist","happe","happ%C3%A9"]
+filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence"] # filter out non-qc news
+valid_months = ["Apr"]
+
+rss = "https://news.google.com/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr&when:7d"
+
+if google_french:
+    try:
+        print(rss)
+        feed = feedparser.parse(rss)
+
+        try:
+            for entry in feed["entries"]:
+                if not any(bl in entry["link"].lower() for bl in filtered_urls):
+                    if "2022" in entry["published"] and any(m in entry["published"] for m in valid_months):
+                        print()
+                        print(entry["title"])
+                        print(entry["link"])
+                        print(entry["published"])
+                    #print(entry["pubDate"])
+
+        except Exception as e1:
+            print("Exception", e1, "in RSS:", rss)
+    except Exception as e2:
+        print("Exception", e2, "Error with:", rss)
+
+########## Google English ##########
+search_keys = ["pedestrian","cyclist","struck","bicycle"]
+filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.com","mlive.com", \
+                 "wgntv.com",".au"] # filter out non-qc news
+valid_months = ["Apr"]
+
+rss = "https://news.google.com/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
+
+if google_english:
+    try:
+        print(rss)
+        feed = feedparser.parse(rss)
+
+        try:
+            for entry in feed["entries"]:
+                if not any(bl in entry["link"].lower() for bl in filtered_urls):
+                    if "2022" in entry["published"] and any(m in entry["published"] for m in valid_months):
+                        print()
+                        print(entry["title"])
+                        print(entry["link"])
+                        print(entry["published"])
+                    #print(entry["pubDate"])
+
+        except Exception as e1:
+            print("Exception", e1, "in RSS:", rss)
+    except Exception as e2:
+        print("Exception", e2, "Error with:", rss)
