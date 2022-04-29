@@ -29,15 +29,19 @@ feeds_to_check = {
 keywords_en = [k for k in open("keywords_en.txt", "r").read().rstrip().split("\n")]
 keywords_fr = [k for k in open("keywords_fr.txt", "r").read().rstrip().split("\n")]
 
+# Import URLs I've already recorded
+used_urls = [k for k in open("data/sources").read().rstrip().split("\n")][1:] # Skip header
+used_urls = [k.replace("\"","").split(",")[1] for k in used_urls] # Convert column to list
+
 # Track all hits in a master file
 master_url_file = "data/rss_matches.csv"
 master_urls = []
 
 # If this flag is true, search my various lists of RSS feeds
-specific_news = True
+specific_news = False
 
 # Flag to check Google News
-google_french = False
+google_french = True
 google_english = False
 
 # Search for stories from selected RSS feeds
@@ -100,9 +104,11 @@ else:
 # Custom google RSS search
 ########## Google French ##########
 
-search_keys = ["pi%C3%A9ton","pieton","cyclist","happe","happ%C3%A9"]
-filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence"] # filter out non-qc news
+search_keys = ["pi%C3%A9ton","pieton","cyclist","happe","happ%C3%A9","percut%C3%A9","percute"]
+filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","lejsl",".re"] # filter out non-qc news
 valid_months = ["Apr"]
+
+filtered_urls = filtered_urls + used_urls
 
 rss = "https://news.google.com/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr&when:7d"
 
@@ -129,8 +135,10 @@ if google_french:
 ########## Google English ##########
 search_keys = ["pedestrian","cyclist","struck","bicycle"]
 filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.com","mlive.com", \
-                 "wgntv.com",".au"] # filter out non-qc news
+                 "wgntv.com",".au"] # filter out non-ca news
 valid_months = ["Apr"]
+
+filtered_urls = filtered_urls + used_urls
 
 rss = "https://news.google.com/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
 

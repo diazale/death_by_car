@@ -9,3 +9,5 @@ happe
 heurté
 heurte
 vélo
+percuté
+percute
