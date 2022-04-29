@@ -10,7 +10,6 @@ cyclists <- read_csv("data/cyclists", col_names = TRUE,
                        col_character(),
                        col_factor(),
                        col_character(),
-                       col_double(),
                        col_character()
                      ))
 
@@ -24,7 +23,6 @@ pedestrians <- read_csv("data/pedestrians", col_names = TRUE,
                           col_character(),
                           col_factor(),
                           col_character(),
-                          col_double(),
                           col_character()
                         ))
 
@@ -38,7 +36,6 @@ others <- read_csv("data/other", col_names = TRUE,
                      col_character(),
                      col_factor(),
                      col_character(),
-                     col_double(),
                      col_character()
                    ))
 
