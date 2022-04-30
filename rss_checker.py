@@ -63,12 +63,10 @@ if specific_news:
 
                 try:
                     for entry in feed["entries"]:
-                        #debugging...
-                        #if rss=="https://rss.cbc.ca/lineup/canada-sudbury.xml":
-                        #    print(entry["title"])
-                        #    print(entry["link"])
                         if any(k in entry["title"].lower() for k in keywords_en) or \
-                                any(k in entry["link"].lower() for k in keywords_en):
+                                any(k in entry["link"].lower() for k in keywords_en) or \
+                                any(k in entry["title"].lower() for k in keywords_fr) or \
+                                any(k in entry["link"].lower() for k in keywords_fr):
                             print()
                             print("Keyword match:", entry["title"])
                             print("Link:", entry["link"])
