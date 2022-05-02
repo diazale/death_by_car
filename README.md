@@ -10,7 +10,7 @@ The scope is currently limited to incidents in 2022, but as I continue filling b
 
 ## Methodology
 
-I have a few scripts that check news feeds for keywords in English and French (which you can find in the files `keywords_en.txt` and `keywords_fr.txt`). These help me to find the most recent incidents. Otherwise, I use [snowball sampling](https://en.wikipedia.org/wiki/Snowball_sampling) to focus on particular regions, time periods, etc, since these require using smaller local sources for which I have not yet created an automated process.
+I have a few scripts that check news feeds for keywords in English and French (which you can find in the files `keywords_en.txt` and `keywords_fr.txt`). These help me to find the most recent incidents. Otherwise, I manually crawl/search websites to focus on particular regions, time periods, etc, since these require using smaller local sources for which I have not yet created an automated process.
 
 ## Data
 
