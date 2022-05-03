@@ -156,3 +156,7 @@
 "152","1","","","","","","fled the scene"
 "153","1","snow plow","","","","1",""
 "154","1","school bus","","","","1",""
+"155","1","SUV","","","","","hit building"
+"156","1","","","","","","victim's car"
+"156","2","","","","","","hit by victim's car"
+"156","3","","","","","","struck victim who exited car"

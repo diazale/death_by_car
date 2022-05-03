@@ -12,17 +12,27 @@ source("read_in_data.R")
 ```{r Find the total number of deaths}
 # Note this doesn't account for revision IDs, might need that in the future
 # Get the total deaths
-total_cyc_deaths <- sum(cyclists$status=="dead")
-total_ped_deaths <- sum(pedestrians$status=="dead")
-total_oth_deaths <- sum(others$status=="dead")
+total_cyc_deaths <- sum(cyclists$status=="dead", na.rm = TRUE)
+total_ped_deaths <- sum(pedestrians$status=="dead", na.rm = TRUE)
+total_oth_deaths <- sum(others$status=="dead", na.rm = TRUE)
 
 total_deaths <- total_cyc_deaths + total_ped_deaths + total_oth_deaths
 
 # Get the total injuries
 # Search for "injury"
-total_cyc_injuries <- sum(grepl("injury", cyclists$status, fixed = TRUE))
-total_ped_injuries <- sum(grepl("injury", pedestrians$status, fixed = TRUE))
-total_oth_injuries <- sum(grepl("injury", others$status, fixed = TRUE))
+total_cyc_injuries <- sum(grepl("injury", cyclists$status, fixed = TRUE), na.rm=TRUE)
+total_ped_injuries <- sum(grepl("injury", pedestrians$status, fixed = TRUE), na.rm=TRUE)
+total_oth_injuries <- sum(grepl("injury", others$status, fixed = TRUE), na.rm=TRUE)
+
+total_crit <- 
+  sum(grepl("critical", c(as.character(pedestrians$status),
+                                      as.character(others$status),
+                                      as.character(cyclists$status)),
+                        fixed = TRUE), na.rm = TRUE) + 
+  sum("life-threatening injury"== c(as.character(pedestrians$status),
+                                    as.character(others$status),
+                                    as.character(cyclists$status)),
+                        fixed = TRUE, na.rm = TRUE)
 
 total_injuries <- total_cyc_injuries + total_ped_injuries + total_oth_injuries
 
@@ -37,33 +47,30 @@ total_oth_victims <- nrow(others)
 
 total_victims <- total_cyc_victims + total_ped_victims + total_oth_victims
 
+fled <- sum(grepl("fled", vehicles$notes, fixed = TRUE), na.rm = TRUE)
+
+##### Total #####
 comment <- paste(
-  "Since April 25, 2022, drivers have hit ", total_victims, " people with their vehicles, across ", total_incidents, 
-  " incidents, resulting in ", total_deaths, " deaths and ", total_injuries, " injuries.",
+  "I have tallied " , total_victims, " victims across ", total_incidents, 
+  " incidents, with drivers killing ", total_deaths, " and wounding ", total_injuries, ".","\n\n",
+  total_crit, "/",total_injuries, " injuries were critical or life-threatening.","\n\n",
+  "Drivers fled the scene ", fled, " times.",
   sep=""
   )
 
-comment
+cat(comment)
+nchar(comment)
 
+##### Breakdown #####
 comment <- paste(
-  "Since April 25, 2022, drivers have killed ", total_ped_deaths, " pedestrians and injured ", total_ped_injuries, ".",
+  "Drivers have killed ", total_ped_deaths, " pedestrians, ", total_cyc_deaths, " cyclists, and ", total_oth_deaths, " others (e.g. road workers, traffic police)",
+  " and wounded ", total_ped_injuries, " pedestrians, ", total_cyc_injuries, " cyclists, and ", total_oth_injuries, " others.",
   sep=""
-)
+  )
 
-comment
-
-comment <- paste(
-  "Since April 25, 2022, drivers have killed ", total_cyc_deaths, " cyclists and injured ", total_cyc_injuries, ".",
-  sep=""
-)
-
-comment
-
-comment <- paste(
-  "Since April 25, 2022, drivers have killed ", total_oth_deaths, " others (e.g. police officers, construction workers) and injured ",
-  total_oth_injuries, ".",
-  sep=""
-)
+print("")
+cat(comment)
+nchar(comment)
 ```
 
 ```{r Filter by specific date}
@@ -81,17 +88,17 @@ others_subset <- others %>%
   filter(., incident_id %in% incidents_subset$incident_id)
 
 # Get the total deaths
-total_cyc_deaths <- sum(cyclists_subset$status=="dead")
-total_ped_deaths <- sum(pedestrians_subset$status=="dead")
-total_oth_deaths <- sum(others_subset$status=="dead")
+total_cyc_deaths <- sum(cyclists_subset$status=="dead", na.rm = TRUE)
+total_ped_deaths <- sum(pedestrians_subset$status=="dead", na.rm = TRUE)
+total_oth_deaths <- sum(others_subset$status=="dead", na.rm = TRUE)
 
 total_deaths <- total_cyc_deaths + total_ped_deaths + total_oth_deaths
 
 # Get the total injuries
 # Search for "injury"
-total_cyc_injuries <- sum(grepl("injury", cyclists_subset$status, fixed = TRUE))
-total_ped_injuries <- sum(grepl("injury", pedestrians_subset$status, fixed = TRUE))
-total_oth_injuries <- sum(grepl("injury", others_subset$status, fixed = TRUE))
+total_cyc_injuries <- sum(grepl("injury", cyclists_subset$status, fixed = TRUE, na.rm = TRUE))
+total_ped_injuries <- sum(grepl("injury", pedestrians_subset$status, fixed = TRUE, na.rm = TRUE))
+total_oth_injuries <- sum(grepl("injury", others_subset$status, fixed = TRUE, na.rm = TRUE))
 
 total_injuries <- total_cyc_injuries + total_ped_injuries + total_oth_injuries
 
@@ -121,8 +128,8 @@ comment
 ```
 
 ```{r Filter to date range}
-min_date <- "2022-04-25"
-max_date <- "2022-04-26"
+min_date <- "2022-04-24"
+max_date <- "2022-04-30"
 
 # Subset the incidents by the dates desired
 incidents_subset <- subset(incidents, lubridate::ymd(min_date) <= date & date <= lubridate::ymd(max_date))
@@ -135,19 +142,29 @@ others_subset <- others %>%
   filter(., incident_id %in% incidents_subset$incident_id)
 
 # Get the total deaths
-total_cyc_deaths <- sum(cyclists_subset$status=="dead")
-total_ped_deaths <- sum(pedestrians_subset$status=="dead")
-total_oth_deaths <- sum(others_subset$status=="dead")
+total_cyc_deaths <- sum(cyclists_subset$status=="dead", na.rm = TRUE)
+total_ped_deaths <- sum(pedestrians_subset$status=="dead", na.rm = TRUE)
+total_oth_deaths <- sum(others_subset$status=="dead", na.rm = TRUE)
 
 total_deaths <- total_cyc_deaths + total_ped_deaths + total_oth_deaths
 
 # Get the total injuries
 # Search for "injury"
-total_cyc_injuries <- sum(grepl("injury", cyclists_subset$status, fixed = TRUE))
-total_ped_injuries <- sum(grepl("injury", pedestrians_subset$status, fixed = TRUE))
-total_oth_injuries <- sum(grepl("injury", others_subset$status, fixed = TRUE))
+total_cyc_injuries <- sum(grepl("injury", cyclists_subset$status, fixed = TRUE), na.rm = TRUE)
+total_ped_injuries <- sum(grepl("injury", pedestrians_subset$status, fixed = TRUE), na.rm = TRUE)
+total_oth_injuries <- sum(grepl("injury", others_subset$status, fixed = TRUE), na.rm = TRUE)
 
 total_injuries <- total_cyc_injuries + total_ped_injuries + total_oth_injuries
+
+total_crit <- 
+  sum("critical"==c(as.character(pedestrians_subset$status),
+                                      as.character(others_subset$status),
+                                      as.character(cyclists_subset$status)),
+                        fixed = TRUE, na.rm = TRUE) + 
+  sum("life-threatening injury"== c(as.character(pedestrians_subset$status),
+                                    as.character(others_subset$status),
+                                    as.character(cyclists_subset$status)),
+                        fixed = TRUE, na.rm = TRUE)
 
 # Get total incidents
 total_incidents <- length(unique(incidents_subset$incident_id))
@@ -161,17 +178,96 @@ total_oth_victims <- nrow(others_subset)
 total_victims <- total_cyc_victims + total_ped_victims + total_oth_victims
 
 comment <- paste(
-  lubridate::wday(min_date, label=TRUE, abbr = FALSE), " ", lubridate::month(min_date, label=TRUE, abbr=FALSE), " ",
-  lubridate::day(min_date), " ", lubridate::year(min_date),
-  " to ", lubridate::wday(max_date, label=TRUE, abbr = FALSE), " ", lubridate::month(max_date, label=TRUE, abbr=FALSE), " ",
-  lubridate::day(max_date), " ", lubridate::year(max_date),
-  ": Drivers hit ", total_victims, 
+  lubridate::wday(min_date, label=TRUE, abbr = FALSE), " ", # Day of week
+  lubridate::month(min_date, label=TRUE, abbr=FALSE), " ", lubridate::day(min_date), " ", lubridate::year(min_date), 
+  " to ", 
+  lubridate::wday(max_date, label=TRUE, abbr = FALSE), " ", # Day of week
+  lubridate::month(max_date, label=TRUE, abbr=FALSE), " ", lubridate::day(max_date), " ", lubridate::year(max_date),
+  ": I tallied drivers hitting ", total_victims, 
   ifelse(total_victims==1, " person with", " people with"), " their vehicles, across ", total_incidents,
-  ifelse(total_incidents==1, " incident", " incidents")," causing ", total_deaths,
-  ifelse(total_deaths==1, " death and ", " deaths and "), total_injuries,
-  ifelse(total_injuries==1, " injury.", " injuries."),
+  ifelse(total_incidents==1, " incident", " incidents"),", killing ", total_deaths,
+  ifelse(total_deaths==1, " and injuring ", " and injuring "), total_injuries, ".",
+  #ifelse(total_injuries==1, " injury.", " injuries."), 
+  "\n\n", total_crit,"/",total_injuries, " injuries were life-threatening or critical.",
   sep=""
   )
-comment
+cat(comment)
+nchar(comment)
+
+##### Breakdown #####
+comment <- paste(
+  "In this span, drivers have killed ", total_ped_deaths, " pedestrians, ", total_cyc_deaths, " cyclists, and ", total_oth_deaths, " others (e.g. road workers, traffic police)",
+  " and wounded ", total_ped_injuries, " pedestrians, ", total_cyc_injuries, " cyclists, and ", total_oth_injuries, " others.",
+  sep=""
+  )
+
+print("")
+cat(comment)
+nchar(comment)
+
+#comment <- paste(
+#  lubridate::month(min_date, label=TRUE, abbr=FALSE), " ",
+#  lubridate::day(min_date), " ", 
+#  ifelse(lubridate::year(min_date)!=lubridate::year(max_date),,lubridate::year(min_date)),
+#  " to ", 
+#  lubridate::month(max_date, label=TRUE, abbr=FALSE), " ",
+#  lubridate::day(max_date), " ", lubridate::year(max_date),
+#  ": ", total_victims, " victims, across ", total_incidents,
+#  ifelse(total_incidents==1, " incident", " incidents"),", causing ", total_deaths,
+#  " deaths and injuring ", total_injuries, ".",
+#  sep=""
+#  )
+
+#print("")
+#cat(comment)
 
 ```
+
+```{r Graphs}
+# Graph incidents by day
+ggplot(incidents) +
+  geom_bar(aes(x=date))
+
+```
+
+```{r}
+incidents %>% group_by(region) %>% count(sort=TRUE)
+```
+
+```{r}
+# incidents resulting in death
+death_ids <- unique(c(subset(pedestrians, status=="dead")$incident_id,
+               subset(cyclists, status=="dead")$incident_id,
+               subset(others, status=="dead")$incident_id))
+death_incidents <- subset(incidents, incident_id %in% death_ids)
+death_incidents %>% group_by(region) %>% count(sort=TRUE)
+
+# total deaths by region
+# count dead by incident ID
+ped_temp <- pedestrians[,c("incident_id","status")]
+cyc_temp <- cyclists[,c("incident_id","status")]
+oth_temp <- others[,c("incident_id","status")]
+
+status_stack <- rbind(ped_temp, cyc_temp, oth_temp)
+
+deaths_by_incident <- status_stack %>%
+  filter(., status=="dead") %>%
+  group_by(incident_id) %>%
+  count(name="deaths")
+
+# join deaths to master incident table
+incidents_with_deaths <- left_join(incidents, deaths_by_incident, by = c("incident_id"))
+incidents_with_deaths[is.na(incidents_with_deaths$deaths),]$deaths <- 0
+
+deaths_by_region <- incidents_with_deaths %>%
+  group_by(region) %>%
+  summarise(n=sum(deaths),)
+
+```
+
+
+
+
+
+
+
