@@ -51,7 +51,7 @@ fled <- sum(grepl("fled", vehicles$notes, fixed = TRUE), na.rm = TRUE)
 
 ##### Total #####
 comment <- paste(
-  "I have tallied " , total_victims, " victims across ", total_incidents, 
+  "So far, I have tallied " , total_victims, " victims across ", total_incidents, 
   " incidents, with drivers killing ", total_deaths, " and wounding ", total_injuries, ".","\n\n",
   total_crit, "/",total_injuries, " injuries were critical or life-threatening.","\n\n",
   "Drivers fled the scene ", fled, " times.",

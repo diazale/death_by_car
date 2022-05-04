@@ -44,6 +44,7 @@ specific_news = False
 google_french = True
 google_english = True
 
+
 # Search for stories from selected RSS feeds
 if specific_news:
     for k in feeds_to_check.keys():
@@ -108,7 +109,7 @@ valid_months = ["May"]
 
 filtered_urls = filtered_urls + used_urls
 
-rss = "https://news.google.com/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr&when:7d"
+rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr&when:7d"
 
 if google_french:
     try:
@@ -133,17 +134,19 @@ if google_french:
 ########## Google English ##########
 search_keys = ["pedestrian","cyclist","struck","bicycle"]
 filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.com","mlive.com", \
-                 "wgntv.com",".au"] # filter out non-ca news
+                 "wgntv.com",".au","wreg.com","tmj4","indianexpress","abc","nbc","al.com"] # filter out non-ca news
 valid_months = ["May"]
 
 filtered_urls = filtered_urls + used_urls
 
-rss = "https://news.google.com/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
+rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
 
 if google_english:
     try:
         print(rss)
         feed = feedparser.parse(rss)
+
+        print(feed)
 
         try:
             for entry in feed["entries"]:

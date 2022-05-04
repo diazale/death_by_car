@@ -12,3 +12,5 @@ https://nitter.net/AbbyNews/rss
 https://nitter.net/blackpressmedia/rss
 https://nitter.net/barrietoday/rss
 https://nitter.net/saltwirenetwork/rss
+https://nitter.net/OPP_HSD/rss
+https://nitter.net/torontopolice/rss
