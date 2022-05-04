@@ -142,7 +142,7 @@
 "138","1","pickup truck","Dodge","Ram","","",""
 "139","1","","","","","","deliberate"
 "140","1","","","","","",""
-"141","1","large truck","","","","",""
+"141","1","transport truck","","","","",""
 "142","1","car","","","","","fled the scene"
 "143","1","","","","","",""
 "144","1","car","BMW","Series 3","","","fled the scene"
@@ -169,3 +169,4 @@
 "163","1","","Kia","","2013","",""
 "164","1","car","Honda","Civic","","","fled the scene, possibly deliberate"
 "165","1","large truck","","","","","left the scene, unaware of collision"
+"166","1","bus","","","","1","TTC bus"
