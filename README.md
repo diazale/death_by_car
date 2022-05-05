@@ -30,7 +30,7 @@ Data are organized into several tables. Each incident has an `incident_id` varia
 
 ## Citation
 
-If you use my data or would like to reference it, please credit me!
+If you use my data or would like to reference it, please credit me.
 
 `Diaz-Papkovich, Alex. "Death By Car." 2022. https://github.com/diazale/death_by_car`
 
