@@ -1,12 +1,16 @@
 # Death By Car
 
-The goal of this project is to track how many people are killed and injured by vehicles in Canada. I began this project April 25, 2022.
+## Purpose
+
+Each year in Canada, hundreds of pedestrians, cyclists, and workers are killed or badly wounded by drivers and their vehicles. It is a widespread, pervasive, and systemic problem; it is not limited to urban, suburban, or rural areas; it affects people of all ages. For many, it is the deadliest aspect of daily life.
+
+The goal of this project is to track how many people are killed and injured by vehicles in Canada.
 
 ## Scope
 
 I am tracking incidents where drivers hit (or threaten to hit) people who are generally not considered vehicle traffic. This includes pedestrians, cyclists, workers (construction, police, EMS, etc), and some vehicles like snowmobiles. Some incidents, like workplace accidents or vehicles hitting buildings, are considered on a case-by-case basis. It does not include incidents such as car-motorcycle collisions.
 
-The scope is currently limited to incidents in 2022, but as I continue filling backwards in time, I may expand it.
+The scope is currently limited to incidents in 2022, but as I continue filling backwards in time, I may expand it. I began this project April 25, 2022.
 
 ## Methodology
 
