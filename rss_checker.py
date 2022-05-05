@@ -38,11 +38,11 @@ master_url_file = "data/rss_matches.csv"
 master_urls = []
 
 # If this flag is true, search my various lists of RSS feeds
-specific_news = True
+specific_news = False
 
 # Flag to check Google News
 google_french = False
-google_english = False
+google_english = True
 
 
 # Search for stories from selected RSS feeds
@@ -135,7 +135,7 @@ if google_french:
 search_keys = ["pedestrian","cyclist","struck","bicycle"]
 filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.com","mlive.com", \
                  "wgntv.com",".au","wreg.com","tmj4","indianexpress","abc","nbc","al.com"] # filter out non-ca news
-valid_months = ["May"]
+valid_months = ["04 May"]
 
 filtered_urls = filtered_urls + used_urls
 

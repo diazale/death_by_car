@@ -24,6 +24,16 @@ total_cyc_injuries <- sum(grepl("injury", cyclists$status, fixed = TRUE), na.rm=
 total_ped_injuries <- sum(grepl("injury", pedestrians$status, fixed = TRUE), na.rm=TRUE)
 total_oth_injuries <- sum(grepl("injury", others$status, fixed = TRUE), na.rm=TRUE)
 
+# get an intersection of these IDs to make sure I'm not double-counting
+total_serious_major_injuries <- sum(grepl("serious", c(as.character(pedestrians$status),
+                                      as.character(others$status),
+                                      as.character(cyclists$status)),
+                        fixed = TRUE), na.rm = TRUE) + 
+  sum(grepl("major", c(as.character(pedestrians$status),
+                                      as.character(others$status),
+                                      as.character(cyclists$status)),
+                        fixed = TRUE), na.rm = TRUE)
+
 total_crit <- 
   sum(grepl("critical", c(as.character(pedestrians$status),
                                       as.character(others$status),
@@ -53,7 +63,8 @@ fled <- sum(grepl("fled", vehicles$notes, fixed = TRUE), na.rm = TRUE)
 comment <- paste(
   "I have tallied " , total_victims, " victims across ", total_incidents, 
   " incidents, with drivers killing ", total_deaths, " and wounding ", total_injuries, ".","\n\n",
-  total_crit, "/",total_injuries, " injuries were critical or life-threatening.","\n\n",
+  total_crit, "/",total_injuries, " injuries were critical or life-threatening. ",total_serious_major_injuries,"/",total_injuries,
+  " were serious or major.\n\n",
   "Drivers fled the scene ", fled, " times.",
   sep=""
   )
@@ -63,7 +74,7 @@ nchar(comment)
 
 ##### Breakdown #####
 comment <- paste(
-  "Drivers have killed ", total_ped_deaths, " pedestrians, ", total_cyc_deaths, " cyclists, and ", total_oth_deaths, " others (e.g. road workers, traffic police)",
+  "Drivers have killed ", total_ped_deaths, " pedestrians, ", total_cyc_deaths, " cyclists, and ", total_oth_deaths, " others (e.g. road workers, roadside service)",
   " and wounded ", total_ped_injuries, " pedestrians, ", total_cyc_injuries, " cyclists, and ", total_oth_injuries, " others.",
   sep=""
   )
