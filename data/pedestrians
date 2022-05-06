@@ -165,3 +165,5 @@
 "188","1","F","35","","dead","road",""
 "192","1","F","","40s","dead","sidewalk",""
 "193","1","M","24","","dead","road",""
+"194","1","","","","non-life-threatening injury","",""
+"195","1","","","","minor injury","crosswalk","clipper by mirror"
