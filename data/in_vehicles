@@ -82,4 +82,6 @@
 "222","1","1","","","","uninjured","","ticketed"
 "226","1","1","M","57","","uninjured","",""
 "228","1","1","F","","","uninjured","","ticketed"
-"230","1","","","","","unspecified injury","",""
+"230","1","1","","","","unspecified injury","",""
+"233","1","1","","","","uninjured","",""
+"234","1","1","M","21","","uninjured","","charged"
