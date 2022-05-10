@@ -204,3 +204,6 @@
 "235","1","M","","","life-threatening injury","",""
 "236","1","F","","","serious injury","intersection",""
 "237","1","F","","60s","non-life-threatening injury","",""
+"240","1","M","4","","minor injury","",""
+"241","1","M","22","","dead","",""
+"242","1","M","64","","dead","",""
