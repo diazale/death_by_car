@@ -1,3 +1,4 @@
+# Import data
 library(tidyverse)
 
 cyclists <- read_csv("data/cyclists", col_names = TRUE,
@@ -63,4 +64,5 @@ vehicles <- read_csv("data/vehicles", col_names = TRUE,
                      ))
 
 in_vehicles <- read.csv("data/in_vehicles")
+buildings <- read.csv("data/buildings")
 sources <- read.csv("data/sources")

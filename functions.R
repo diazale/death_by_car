@@ -4,7 +4,7 @@ count_occurences <- function(in_, status_, exact=FALSE){
     # Others like "injury" or "critical" can be sub-strings
     return(nrow(subset(in_, status==status_)))
   } else {
-    nrow(subset(in_, grepl(status_, status, fixed = TRUE)))
+    return(nrow(subset(in_, grepl(status_, status, fixed = TRUE))))
   }
 }
 
