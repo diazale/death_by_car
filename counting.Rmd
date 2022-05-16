@@ -1,7 +1,5 @@
 ---
 title: "Counting"
-author: "Alex Diaz-Papkovich"
-date: "26/04/2022"
 output: html_document
 ---
 
