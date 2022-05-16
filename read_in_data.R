@@ -64,5 +64,5 @@ vehicles <- read_csv("data/vehicles", col_names = TRUE,
                      ))
 
 in_vehicles <- read.csv("data/in_vehicles")
-buildings <- read.csv("data/buildings")
+structures <- read.csv("data/structures")
 sources <- read.csv("data/sources")
