@@ -25,8 +25,9 @@ Data are organized into several tables. Each incident has an `incident_id` varia
 *  `sources`: URL and archive URL (where possible) for incidents. Some incidents have multiple sources.
 *  `pedestrians`: Pedestrians involved
 *  `cyclists`: Cyclists involved
-*  `other`: People involved who are not strictly pedestrians or cyclists, such as road workers, firefighters, EMS, people changing a tire, snowmobilers, etc.
+*  `other`: People involved who are not strictly pedestrians or cyclists, such as road workers, firefighters, EMS, people changing a tire, snowmobilers, horse-and-buggy, etc.
 *  `in_vehicle`: People in the vehicles involved, where available. The `driver` flag is set to `1` to indicate that the individual was driving the vehicle at the time. Injury status is noted where available. Notes mention if there were arrests, charges, whether the strike was deliberate, etc.
+* `structures`: Structures hit by drivers/vehicles, categorized as residential or non-residential. These are included when there is significant damage and/or victimization, even if no physical injuries are reported. While most are buildings, some are not (e.g. things like gazebos, sheds, patios, etc.)
 
 ## Citation
 
