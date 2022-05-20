@@ -210,7 +210,7 @@
 "243","1","M","11","","serious, non-life-threatening injury","",""
 "244","1","F","","teen","minor injury","crosswalk, school",""
 "245","1","F","","","major injury, fracture leg","sidewalk",""
-"246","1","F","","","life-threatening injury","pushing stroller",""
+"246","1","F","","","life-threatening injury","","pushing stroller"
 "246","1","","","infant","uninjured","",""
 "250","1","","","","serious injury","",""
 "256","1","","","","non-life-threatening injury","shoulder",""
@@ -246,3 +246,4 @@
 "297","1","F","67","","non-life-threatening injury","",""
 "299","1","F","","adult","serious injury","",""
 "301","1","F","","30s","unknown injury","crosswalk",""
+"304","1","M","65","","unknown injury","","mobility scooter"
