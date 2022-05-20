@@ -38,14 +38,14 @@ master_url_file = "data/rss_matches.csv"
 master_urls = []
 
 # If this flag is true, search my various lists of RSS feeds
-specific_news = False
+specific_news = True
 
 # Flag to check Google News
-google_french = True
-google_english = True
+google_french = False
+google_english = False
 
 # filter for the google search
-valid_dates = ["15 May"]
+valid_dates = ["20 May"]
 
 
 # Search for stories from selected RSS feeds
