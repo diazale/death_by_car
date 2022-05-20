@@ -4,7 +4,7 @@
 
 Each year in Canada, hundreds of pedestrians, cyclists, and workers are killed or badly wounded by drivers and their vehicles. It is a widespread, pervasive, and systemic problem; it is not limited to urban, suburban, or rural areas; it affects people of all ages. For many, it is the deadliest aspect of daily life.
 
-The goal of this project is to track how many people are killed and injured by vehicles in Canada.
+The goal of this project is to track how many people are killed and injured by vehicles in Canada, in particular those who are not in vehicles themselves. I will be tweeting tallies and various findings via [@DeathByCar](https://twitter.com/DeathByCar).
 
 ## Scope
 
