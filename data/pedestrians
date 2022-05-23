@@ -253,3 +253,5 @@
 "311","1","F","","adult","minor injury","","dog seriously injured"
 "311","1","F","","girl","minor injury","",""
 "312","1","M","","","serious injury","",""
+"313","1","M","21","","life-threatening injury","crossing",""
+"314","1","M","","adult","uninjured","crosswalk",""

@@ -31,7 +31,7 @@
 "220","1","M","59","","hospital injury","road",""
 "221","1","","59","","serious injury","road",""
 "229","1","M","54","","dead","intersection",""
-"230","1","","","","dead","",""
+"230","1","M","71","","dead","",""
 "238","1","M","","50s","","crosswalk","walking bike across street"
 "259","1","","","","life-threatening injury","intersection",""
 "260","1","","","","hospital injury","",""
