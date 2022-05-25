@@ -247,6 +247,7 @@
 "299","1","F","","adult","serious injury","",""
 "301","1","F","","30s","unknown injury","crosswalk",""
 "304","1","M","65","","unknown injury","","mobility scooter"
+"305","1","F","","adult","uninjured","","walking with son who was biking"
 "308","1","M","83","83","serious head injury","crossing","crossing on red"
 "308","2","F","83","environ même age","minor injury","crossing","crossing on red, wife of 1"
 "309","1","F","32","","serious injury","","scooter"
@@ -263,3 +264,5 @@
 "318","5","","","","serious injury","",""
 "318","6","","","","serious injury","",""
 "319","1","M","24","","dead","road",""
+"320","1","","","","minor injury","along road",""
+"321","1","M","18","","dead","side of road",""
