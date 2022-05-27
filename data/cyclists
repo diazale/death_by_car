@@ -53,3 +53,6 @@
 "332","1","","","","taken to hospital with injury","",""
 "342","1","M","","20s","serious injury","",""
 "347","1","","","","life-threatening injury","",""
+"351","1","","","","non-life-threatening injury","",""
+"352","1","M","70","","serious injury","road",""
+"353","1","F","","30s","serious injury","road","fell off bike and hit"
