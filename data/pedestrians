@@ -283,3 +283,6 @@
 "339","1","","","","dead","",""
 "340","1","M","15","","serious injury","",""
 "341","1","F","23","","life-threatening injury","crossing",""
+"345","1","M","88","","life-threatening injury","intersection",""
+"345","2","F","85","","life-threatening injury","intersection",""
+"346","1","","","","non-life-threatening injury","",""
