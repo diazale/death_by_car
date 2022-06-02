@@ -303,7 +303,6 @@
 "372","1","F","24","","dead","","girlfriend of driver"
 "375","1","F","11","","minor injury","crosswalk",""
 "376","1","","","","serious injury","",""
-"377","1","M","41","","life-threatening injury","road",""
 "378","1","","","","critical injury","",""
 "379","1","","","","life-threatening injury","",""
 "380","1","F","30","","dead","",""
@@ -315,3 +314,5 @@
 "384","1","","","","minor injury","intersection","hit by mirror"
 "385","1","M","11","","head injury","crosswalk","concussion, exiting school bus"
 "388","1","","","","non-life-threatening injury","crosswalk",""
+"389","1","M","50","","minor injury","alley",""
+"390","1","","","teen","minor injury","",""
