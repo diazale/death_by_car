@@ -45,7 +45,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ["03 Jun 2022"]
+valid_dates = ["3 Jun 2022"]
 
 
 # Search for stories from selected RSS feeds
@@ -67,14 +67,17 @@ if specific_news:
 
                 try:
                     for entry in feed["entries"]:
+                        #print(entry["published"])
                         if (any(k in entry["title"].lower() for k in keywords_en) or \
                                 any(k in entry["link"].lower() for k in keywords_en) or \
                                 any(k in entry["title"].lower() for k in keywords_fr) or \
                                 any(k in entry["link"].lower() for k in keywords_fr)) and \
+                                any(m in entry["published"] for m in valid_dates) and \
                                 entry["link"] not in used_urls:
                             print()
                             print("Keyword match:", entry["title"])
                             print("Link:", entry["link"])
+
                             print()
                             master_urls.append([entry["title"],entry["link"],name,ts])
                 except Exception as e1:
