@@ -38,14 +38,14 @@ master_url_file = "data/rss_matches.csv"
 master_urls = []
 
 # If this flag is true, search my various lists of RSS feeds
-specific_news = True
+specific_news = False
 
 # Flag to check Google News
-google_french = False
-google_english = False
+google_french = True
+google_english = True
 
 # filter for the google search
-valid_dates = ["1 Jun"]
+valid_dates = ["03 Jun 2022"]
 
 
 # Search for stories from selected RSS feeds
@@ -108,9 +108,10 @@ else:
 ########## Google French ##########
 
 search_keys = ["pi%C3%A9ton","pieton","cyclist","happe","happ%C3%A9","percut%C3%A9","percute"]
-filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","lejsl",".re",".lu"] # filter out non-qc news
+filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","lejsl",".re",".lu",
+                 "infonormandie"] # filter out non-qc news
 
-filtered_urls = filtered_urls + used_urls
+#filtered_urls = filtered_urls + used_urls
 
 rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr&when:7d"
 
@@ -119,15 +120,16 @@ if google_french:
         print(rss)
         feed = feedparser.parse(rss)
 
+        print(feed)
+
         try:
             for entry in feed["entries"]:
-                if not any(bl in entry["link"].lower() for bl in filtered_urls):
-                    if "2022" in entry["published"] and any(m in entry["published"] for m in valid_dates):
-                        print()
-                        print(entry["title"])
-                        print(entry["link"])
-                        print(entry["published"])
-                    #print(entry["pubDate"])
+                if (any(m in entry["published"] for m in valid_dates) and not entry["link"] in used_urls) and \
+                        not any(bl in entry["link"].lower() for bl in filtered_urls):
+                    print()
+                    print(entry["title"])
+                    print(entry["link"])
+                    print(entry["published"])
 
         except Exception as e1:
             print("Exception", e1, "in RSS:", rss)
@@ -138,9 +140,8 @@ if google_french:
 search_keys = ["pedestrian","cyclist","struck","bicycle"]
 filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.com","mlive.com", \
                  "wgntv.com",".au","wreg.com","tmj4","indianexpress","abc","nbc","al.com",".ie",".co.nz"] # filter out non-ca news
-#valid_months = ["04 May"]
 
-filtered_urls = filtered_urls + used_urls
+#filtered_urls = filtered_urls + used_urls
 
 rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
 
@@ -153,13 +154,12 @@ if google_english:
 
         try:
             for entry in feed["entries"]:
-                if not any(bl in entry["link"].lower() for bl in filtered_urls):
-                    if "2022" in entry["published"] and any(m in entry["published"] for m in valid_dates):
-                        print()
-                        print(entry["title"])
-                        print(entry["link"])
-                        print(entry["published"])
-                    #print(entry["pubDate"])
+                if (any(m in entry["published"] for m in valid_dates) and not entry["link"] in used_urls) and \
+                        not any(bl in entry["link"].lower() for bl in filtered_urls):
+                    print()
+                    print(entry["title"])
+                    print(entry["link"])
+                    print(entry["published"])
 
         except Exception as e1:
             print("Exception", e1, "in RSS:", rss)
