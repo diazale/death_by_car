@@ -323,3 +323,8 @@
 "395","1","M","","","serious injury","",""
 "396","1","M","","50s","life-threatening injury","",""
 "397","1","F","25","","critical injury","",""
+"399","1","M","56","","dead","",""
+"400","1","","","","","protest",""
+"400","2","","","","","protest",""
+"400","3","","","","minor injury","protest",""
+"400","4","","","","minor injury","protest",""

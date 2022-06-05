@@ -15,15 +15,23 @@ ts = datetime.timestamp(datetime.now())
 
 feed_dir = "rss_feeds"
 
-feeds_to_check = {
+# feeds_to_check = {
+#     "CBC":"cbc_rss.txt",
+#     "Radio-Canada":"radio_canada_rss.txt",
+#     "Global":"global_rss.txt",
+#     "CTV":"ctvnews_rss.txt",
+#     "QC":"quebec_fixed_rss.txt",
+#     "Nitter_fr":"nitter_fr_rss.txt",
+#     "Nitter_en":"nitter_en_rss.txt"}
+feeds_to_check_en = {
     "CBC":"cbc_rss.txt",
-    "Radio-Canada":"radio_canada_rss.txt",
     "Global":"global_rss.txt",
     "CTV":"ctvnews_rss.txt",
-    "QC":"quebec_fixed_rss.txt",
-    "Nitter_fr":"nitter_fr_rss.txt",
     "Nitter_en":"nitter_en_rss.txt"}
-#feeds_to_check = {"CBC":"cbc_rss.txt"}
+feeds_to_check_fr = {
+    "Radio-Canada":"radio_canada_rss.txt",
+    "QC":"quebec_fixed_rss.txt",
+    "Nitter_fr":"nitter_fr_rss.txt"}
 
 # Import keywords as a list
 keywords_en = [k for k in open("keywords_en.txt", "r").read().rstrip().split("\n")]
@@ -45,35 +53,61 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ["3 Jun 2022"]
-
+valid_dates = ["5 Jun 2022"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
-    for k in feeds_to_check.keys():
-        print(feeds_to_check[k])
+    # French
+    for k in feeds_to_check_fr.keys():
+        print(feeds_to_check_fr[k])
         name = k
-        rss_file = feeds_to_check[k]
+        rss_file = feeds_to_check_fr[k]
 
         print("Beginning RSS keyword check for", name)
 
         rss_list = [l for l in open(os.path.join(feed_dir, rss_file), "r").read().rstrip().split("\n")]
 
         for rss in rss_list:
-            #print(rss)
-
             try:
                 feed = feedparser.parse(rss)
-
                 try:
                     for entry in feed["entries"]:
-                        #print(entry["published"])
+                        if (any(k in entry["title"].lower() for k in keywords_fr) or \
+                            any(k in entry["link"].lower() for k in keywords_fr) or \
+                            any(k in entry["description"].lower() for k in keywords_fr)) and \
+                            any(m in entry["published"] for m in valid_dates) and \
+                            entry["link"] not in used_urls:
+                            print()
+                            print("Keyword match:", entry["title"])
+                            print("Link:", entry["link"])
+
+                            print()
+                            master_urls.append([entry["title"],entry["link"],name,ts])
+                except Exception as e1:
+                    print("Exception", e1, "in RSS:", rss)
+            except Exception as e2:
+                print("Exception", e2, "Error with:", rss)
+
+    # English
+    for k in feeds_to_check_en.keys():
+        print(feeds_to_check_en[k])
+        name = k
+        rss_file = feeds_to_check_en[k]
+
+        print("Beginning RSS keyword check for", name)
+
+        rss_list = [l for l in open(os.path.join(feed_dir, rss_file), "r").read().rstrip().split("\n")]
+
+        for rss in rss_list:
+            try:
+                feed = feedparser.parse(rss)
+                try:
+                    for entry in feed["entries"]:
                         if (any(k in entry["title"].lower() for k in keywords_en) or \
-                                any(k in entry["link"].lower() for k in keywords_en) or \
-                                any(k in entry["title"].lower() for k in keywords_fr) or \
-                                any(k in entry["link"].lower() for k in keywords_fr)) and \
-                                any(m in entry["published"] for m in valid_dates) and \
-                                entry["link"] not in used_urls:
+                            any(k in entry["link"].lower() for k in keywords_en) or \
+                            any(k in entry["description"].lower() for k in keywords_en)) and \
+                            any(m in entry["published"] for m in valid_dates) and \
+                            entry["link"] not in used_urls:
                             print()
                             print("Keyword match:", entry["title"])
                             print("Link:", entry["link"])
