@@ -46,14 +46,14 @@ master_url_file = "data/rss_matches.csv"
 master_urls = []
 
 # If this flag is true, search my various lists of RSS feeds
-specific_news = False
+specific_news = True
 
 # Flag to check Google News
-google_french = True
-google_english = True
+google_french = False
+google_english = False
 
 # filter for the google search
-valid_dates = ["5 Jun 2022"]
+valid_dates = ["4 Jun 2022"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -80,6 +80,7 @@ if specific_news:
                             print()
                             print("Keyword match:", entry["title"])
                             print("Link:", entry["link"])
+                            print("Published:", entry["published"])
 
                             print()
                             master_urls.append([entry["title"],entry["link"],name,ts])
@@ -111,6 +112,7 @@ if specific_news:
                             print()
                             print("Keyword match:", entry["title"])
                             print("Link:", entry["link"])
+                            print("Published:", entry["published"])
 
                             print()
                             master_urls.append([entry["title"],entry["link"],name,ts])
