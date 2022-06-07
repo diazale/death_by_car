@@ -129,6 +129,7 @@
 "144","1","M","52","","dead","crosswalk",""
 "145","1","","","","critical injury","","scooter"
 "147","1","","","","head injury","",""
+"147","1","","","","","","incident report refers to multiple pedestrians"
 "149","1","M","68","","serious injury","crosswalk","fell, dragged 100m"
 "150","1","M","","80s","serious injury","",""
 "151","1","M","61","","non-life-threatening head injury","",""
@@ -333,3 +334,5 @@
 "404","1","","","","serious injury","",""
 "405","1","","","","","",""
 "406","1","F","73","","non-life-threatening injury","crosswalk",""
+"410","1","F","22","","minor injury","crosswalk",""
+"411","1","M","","","major injury","","broken leg"
