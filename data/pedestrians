@@ -344,4 +344,5 @@
 "418","1","M","25","","non-life-threatening injury","crosswalk",""
 "419","1","M","","","dead","road",""
 "420","1","","","","minor injury","","scooter"
-"422","1","M","","adult","uninjured","crossing",""
+"422","1","M","","adult","uninjured","crossing","near miss"
+"423","1","F","92","","taken to hospital with injury","",""
