@@ -6,6 +6,7 @@ output: html_document
 ```{r Import data}
 source("read_in_data.R")
 source("functions.R")
+source("dicts.R")
 ```
 
 ```{r Find the total number of deaths}
