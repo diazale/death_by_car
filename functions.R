@@ -33,3 +33,26 @@ subset_by_date <- function(data_, min_date_=NA, max_date_=NA){
     return(subset(incidents, date <= lubridate::ymd(max_date_)))
   }
 }
+
+group_ages <- function(in_data){
+  # Given a data frame with columns for age or approximate age (age_range), give an age group
+  # This uses the vector age_ranges, defined in dicts.R
+  # Returns the data frame with the new column "age_group"
+  
+  # First use the actual age, if available
+  in_data <- in_data %>%
+    mutate(
+      age_group = case_when(
+        !is.na(age) & age < 18 ~ "Under 18",
+        !is.na(age) & age > 64 ~ "65 and older",
+        !is.na(age) ~ "18 to 64"
+      )
+    )
+  
+  # If there is no age, but there is an age range (e.g. "senior"), use the named vector with its equivalencies
+  in_data$age_group <- ifelse(is.na(in_data$age_group) & !is.na(in_data$age_range), # If there is no age, but there is age_range...
+                              age_ranges[match(as.character(in_data$age_range), names(age_ranges))], # Match to age_range
+                              in_data$age_group) # Otherwise, don't do anything
+  
+  return(in_data)
+}
