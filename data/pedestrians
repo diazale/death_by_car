@@ -352,3 +352,5 @@
 "429","1","F","69","","upper body injury","intersection",""
 "430","1","M","34","","dead","",""
 "431","1","","","adult","serious injury","crosswalk",""
+"432","1","M","50","","non-life-threatening injury","",""
+"433","1","F","","adult","life-threatening injury","",""
