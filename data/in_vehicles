@@ -114,6 +114,7 @@
 "295","1","1","1","M","22","","uninjured","","charged with murder"
 "297","1","1","1","F","84","","unspecified injury","","taken to hospital as precaution"
 "301","1","1","1","","","","uninjured","","charged"
+"305","1","1","1","M","","","uninjured","","charged"
 "309","1","1","1","F","30","","uninjured","","arrested, impaired"
 "310","1","1","1","M","68","","dead","",""
 "311","1","1","1","M","","20s","minor injury","",""
@@ -161,3 +162,4 @@
 "426","1","1","1","","","","uninjured","","ticketed"
 "427","1","1","1","","","","uninjured","","charged"
 "428","1","1","1","M","","","uninjured","",""
+"437","1","1","1","M","31","","uninjured","","charged, impaired"
