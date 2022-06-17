@@ -24,3 +24,6 @@
 "401","1","residential","damaged","home"
 "415","1","non-residential","damaged","city centre"
 "428","1","non-residential","damaged","veterinary clinic"
+"462","1","non-residential","destroyed","restaurant patio"
+"463","1","residential","heavily damaged","apartment"
+"464","1","non-residential","heavily damaged","dance studio"
