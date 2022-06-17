@@ -4,6 +4,8 @@
 # Look at data first to build on it
 #unique(c(as.character(pedestrians$status), as.character(cyclists$status), as.character(others$status)))
 
+##### Injury categories #####
+
 injury_categories <- c()
 injury_categories[["dead"]] <- "Dead"
 injury_categories[["critical injury"]] <- "Critical"
@@ -42,7 +44,7 @@ injury_categories[["non life-threatening"]] <- "Major"
 # Usage example:
 # pedestrians$injury_type <- injury_categories[match(as.character(pedestrians$status), names(injury_categories))]
 
-# Vehicle types
+##### Vehicle classes #####
 vehicle_types <- c()
 vehicle_types[["car"]] <- "Car"
 vehicle_types[["SUV"]] <- "SUV"
@@ -74,6 +76,7 @@ vehicle_types[["commercial truck"]] <- "Large truck"
 vehicle_types[["streetcar"]] <- "Bus or streetcar"
 vehicle_types[["mail truck"]] <- "Large truck"
 
+##### Age groups #####
 # Age group (Under or Over 18)
 unique(c(as.character(pedestrians$age_range), as.character(cyclists$age_range), as.character(others$age_range)))
 
@@ -110,3 +113,14 @@ age_ranges[["young boy"]] <- "Under 18"
 age_ranges[["boy, youth"]] <- "Under 18"
 age_ranges[["adolescent"]] <- "Under 18"
 age_ranges[["16 to 21"]] <- "Under 18"
+
+##### Metro areas #####
+
+# Look at regions and classify as Greater [X] Area
+greater_toronto <- c("Ajax","Aurora","Brampton","Brock","Burlington","Caledon","Clarington","East Gwillimbury","Georgina",
+                     "Halton Hills","King","Markham","Milton","Mississauga","Newmarket","Oakville","Oshawa","Pickering",
+                     "Richmond Hill","Scugog","Toronto","Uxbridge","Vaughan","Whitby","Whitchurch-Stouffville")
+greater_montreal <- c()
+
+
+

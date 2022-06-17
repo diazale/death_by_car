@@ -57,3 +57,152 @@ total_victims <- total_cyc_victims + total_ped_victims + total_oth_victims
 
 total_fled <- sum(grepl("fled", vehicles$notes, fixed = TRUE), na.rm = TRUE)
 ```
+
+```{r Plot fatalities and injuries over time}
+# Get fatalities and injuries by date
+temp1 <- pedestrians
+temp1$victim_type <- "Pedestrian"
+temp1 <- temp1[,c("incident_id","victim_type","injury_type","age_group")]
+temp2 <- cyclists
+temp2$victim_type <- "Cyclist"
+temp2 <- temp2[,c("incident_id","victim_type","injury_type","age_group")]
+temp3 <- others
+temp3$victim_type <- "Other"
+temp3 <- temp3[,c("incident_id","victim_type","injury_type","age_group")]
+
+victims <- rbind.data.frame(temp1, temp2, temp3)
+victims[is.na(victims$injury_type),]$injury_type <- "Unknown"
+victims[is.na(victims$age_group),]$age_group <- "Unknown"
+
+rm(temp1,temp2,temp3)
+
+# Breakdown of injuries by date
+incidents_counts <- incidents
+incidents_counts <- left_join(incidents_counts, victims %>%
+  group_by(incident_id) %>%
+  filter(., injury_type == "Dead") %>%
+  count(name = "dead"),
+  by = c("incident_id"))
+incidents_counts <- left_join(incidents_counts, victims %>%
+  group_by(incident_id) %>%
+  filter(., injury_type == "Critical") %>%
+  count(name = "critical"),
+  by = c("incident_id"))
+incidents_counts <- left_join(incidents_counts, victims %>%
+  group_by(incident_id) %>%
+  filter(., injury_type == "Major") %>%
+  count(name = "major"),
+  by = c("incident_id"))
+incidents_counts <- left_join(incidents_counts, victims %>%
+  group_by(incident_id) %>%
+  filter(., injury_type == "Minor") %>%
+  count(name = "minor"),
+  by = c("incident_id"))
+
+# Convert to data frame as tibbles don't support matrix indexing
+incidents_counts <- data.frame(incidents_counts)
+incidents_counts[c("dead","critical","major","minor")][is.na(incidents_counts[c("dead","critical","major","minor")])] <- 0
+
+# Get the injury type counts by date
+injury_counts_by_date <- incidents_counts %>%
+  group_by(date) %>%
+  summarise(dead = sum(dead),
+            critical = sum(critical),
+            major = sum(major),
+            minor = sum(minor))
+
+# Get the cumulative sums by date
+injury_counts_by_date$cumsum_dead <- cumsum(injury_counts_by_date$dead)
+injury_counts_by_date$cumsum_critical <- cumsum(injury_counts_by_date$critical)
+injury_counts_by_date$cumsum_major <- cumsum(injury_counts_by_date$major)
+injury_counts_by_date$cumsum_minor <- cumsum(injury_counts_by_date$minor)
+
+# Convert to tall data
+temp <- injury_counts_by_date[c("date","cumsum_dead","cumsum_critical","cumsum_major","cumsum_minor")]
+data_tall <- temp %>%
+  gather(., type, number, cumsum_dead:cumsum_minor)
+
+# Plot the values
+ggplot(injury_counts_by_date, aes(x=date)) +
+  geom_line(aes(y=cumsum_dead, colour = "cumsum_dead")) +
+  geom_line(aes(y=cumsum_critical, colour = "cumsum_critical")) +
+  geom_line(aes(y=cumsum_major, colour = "cumsum_major")) +
+  geom_line(aes(y=cumsum_minor, colour = "cumsum_minor")) +
+  ggtitle("Injuries and deaths over time") +
+  ylab("Total over time") + xlab("Date") +
+  scale_colour_manual("",
+                      breaks = c("cumsum_dead", "cumsum_critical", "cumsum_major", "cumsum_minor"),
+                      values = c("cumsum_dead"="#581845", "cumsum_critical"="#C70039", "cumsum_major"="#FF5733", "cumsum_minor"="#DCA800"),
+                      labels = c("Dead","Critical injuries","Major injuries","Minor injuries")) + 
+  theme_bw() +
+  theme(legend.position="bottom")
+
+data_tall$type <- factor(data_tall$type, levels = c("cumsum_dead","cumsum_critical","cumsum_major","cumsum_minor"))
+ggplot(data_tall, aes(x=date)) +
+  geom_area(aes(y=number, fill=type)) +
+  scale_fill_manual(values = c("#581845", "#C70039", "#FF5733", "#DCA800"),
+                    labels = c("Dead","Critical","Major","Minor")) +
+  guides(fill=guide_legend(title="Injury type")) +
+  theme_bw() +
+  ggtitle("Injuries and deaths from drivers, Canada, 2022") +
+  xlab("Date") + ylab("Total victims") +
+  theme(text = element_text(size = 20)) +
+  annotate("text", x = max(incidents$date), y = 0, label = "@DeathByCar",
+            hjust=1.1, vjust=-1.1, col="white", cex=6,
+            fontface = "bold", alpha = 0.4)
+```
+
+```{r Vehicle and injuries}
+# Get the distributions of injuries by vehicle class
+# Assume the first listed struck the victim
+# Check "notes" for the string "struck pedestrian" or "hit pedestrian"
+# Or just remove cases where multiple vehicles hit the same person (56,339)
+# Or just not care
+vehicles_involved <- subset(vehicles, vehicle_id==1 & !(incident_id %in% c(56,339)))
+
+# Combine victim data into one data frame
+temp1 <- pedestrians
+temp1$victim_type <- "Pedestrian"
+temp1 <- temp1[,c("incident_id","victim_type","injury_type","age_group")]
+temp2 <- cyclists
+temp2$victim_type <- "Cyclist"
+temp2 <- temp2[,c("incident_id","victim_type","injury_type","age_group")]
+temp3 <- others
+temp3$victim_type <- "Other"
+temp3 <- temp3[,c("incident_id","victim_type","injury_type","age_group")]
+
+victims <- rbind.data.frame(temp1, temp2, temp3)
+rm(temp1,temp2,temp3)
+
+# Attach vehicle types to incidents, then count deaths by incident and attach that
+incidents_details <- left_join(incidents, vehicles_involved[,c("incident_id","class")], by = c("incident_id"))
+incidents_details <- left_join(incidents_details, victims, by = c("incident_id"))
+
+# Cross-tab vehicle class with victim status (where vehicle is known)
+incidents_analysis <- subset(incidents_details, !is.na(class))
+ftable(table(incidents_analysis$class, incidents_analysis$injury_type))
+margin.table(table(incidents_analysis$class, incidents_analysis$injury_type),1)
+
+# Unfortunately there is too much missing data to do much here
+# About half the vehicles have no information as to what type they are.
+# Age and injury analysis is probably more useful.
+incidents_analysis <- subset(incidents_details, !is.na(age_group))
+injuries_by_age <- data.frame(table(incidents_analysis$age_group, incidents_analysis$injury_type))
+colnames(injuries_by_age) <- c("age_group","injury_type","number")
+
+injuries_by_age$age_group <- factor(injuries_by_age$age_group, levels = c("Under 18","18 to 64","65 and older"))
+injuries_by_age$injury_type <- factor(injuries_by_age$injury_type, levels = rev(c("Dead","Critical","Major","Minor","Uninjured")))
+
+# Make a stacked bar plot
+ggplot(injuries_by_age) +
+  geom_bar(aes(age_group, fill=injury_type, weight=number), position = "stack") +
+  ggtitle("Injuries and deaths by drivers, Canada, 2022") +
+  ylab("Number of victims") + xlab("Age range") +
+  scale_fill_manual(values=rev(c("#581845","#900C3F","#FF5733","#FFC300","#CCE998"))) +
+  guides(fill=guide_legend(title="Injury status")) +
+  theme_bw() +
+  theme(text = element_text(size =20)) +
+  annotate("text", x = "18 to 64", y = 0, label = "@DeathByCar",
+            hjust=0.5, vjust=-1.1, col="white", cex=6,
+            fontface = "bold", alpha = 0.4)
+```

@@ -363,5 +363,6 @@
 "445","1","F","58","","dead","driveway","rolled over by her own unoccupied vehicle"
 "446","1","M","64","","dead","driveway","struck by own vehicle"
 "449","1","F","29","","serious injury","crosswalk","walking bike"
-"450","1","M","14","","head injury","roadway on scooter",""
+"450","1","M","15","","head injury","roadway","push scooter"
 "451","1","M","17","","critical injury","",""
+"454","1","F","","adult","non-life-threatening injury","crosswalk",""
