@@ -370,3 +370,7 @@
 "460","1","F","32","","serious injury","intersection",""
 "461","1","","","adult","non-life-threatening injury","",""
 "467","1","F","80","","dead","parking lot",""
+"468","1","F","","adult","serious injury","intersection",""
+"469","1","M","","adult","serious injury","",""
+"470","1","F","26","","critical injury","crossing",""
+"471","1","M","","late 60s","serious injury","",""
