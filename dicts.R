@@ -36,7 +36,7 @@ injury_categories[["unknown injury"]] <- "Minor"
 injury_categories[["face and arm injury"]] <- "Major"
 injury_categories[["upper body injury"]] <- "Major"
 injury_categories[["hospital injury"]] <- "Major"
-injury_categories[["life-altering injury"]] <- "Major"
+injury_categories[["life-altering injury"]] <- "Critical"
 injury_categories[["airlifted to hospital with injury"]] <- "Major"
 injury_categories[["significant non-life-threatening injury"]] <- "Major"
 injury_categories[["non life-threatening"]] <- "Major"
@@ -75,6 +75,8 @@ vehicle_types[["forklift"]] <- "Other"
 vehicle_types[["commercial truck"]] <- "Large truck"
 vehicle_types[["streetcar"]] <- "Bus or streetcar"
 vehicle_types[["mail truck"]] <- "Large truck"
+vehicle_types[["cement truck"]] <- "Large truck"
+vehicle_types[["street sweeper"]] <- "Other"
 
 ##### Age groups #####
 # Age group (Under or Over 18)
@@ -113,6 +115,7 @@ age_ranges[["young boy"]] <- "Under 18"
 age_ranges[["boy, youth"]] <- "Under 18"
 age_ranges[["adolescent"]] <- "Under 18"
 age_ranges[["16 to 21"]] <- "Under 18"
+age_ranges[["late 60s"]] <- "65 and older"
 
 ##### Metro areas #####
 
