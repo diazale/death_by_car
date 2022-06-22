@@ -124,6 +124,8 @@ greater_toronto <- c("Ajax","Aurora","Brampton","Brock","Burlington","Caledon","
                      "Halton Hills","King","Markham","Milton","Mississauga","Newmarket","Oakville","Oshawa","Pickering",
                      "Richmond Hill","Scugog","Toronto","Uxbridge","Vaughan","Whitby","Whitchurch-Stouffville")
 greater_montreal <- c()
+greater_vancouver <- c()
+greater_victoria <- c()
 
 
 
