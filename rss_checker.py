@@ -49,11 +49,11 @@ master_urls = []
 specific_news = True
 
 # Flag to check Google News
-google_french = False
-google_english = False
+google_french = True
+google_english = True
 
 # filter for the google search
-valid_dates = ["4 Jun 2022"]
+valid_dates = ["22 Jun","23 Jun"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -72,6 +72,8 @@ if specific_news:
                 feed = feedparser.parse(rss)
                 try:
                     for entry in feed["entries"]:
+
+
                         if (any(k in entry["title"].lower() for k in keywords_fr) or \
                             any(k in entry["link"].lower() for k in keywords_fr) or \
                             any(k in entry["description"].lower() for k in keywords_fr)) and \
@@ -148,9 +150,9 @@ else:
 
 search_keys = ["pi%C3%A9ton","pieton","cyclist","happe","happ%C3%A9","percut%C3%A9","percute"]
 filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","lejsl",".re",".lu",
-                 "infonormandie"] # filter out non-qc news
+                 "infonormandie",".mu",".ma"] # filter out non-qc news
 
-#filtered_urls = filtered_urls + used_urls
+filtered_urls = filtered_urls + used_urls
 
 rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr&when:7d"
 
