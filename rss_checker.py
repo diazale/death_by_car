@@ -46,14 +46,14 @@ master_url_file = "data/rss_matches.csv"
 master_urls = []
 
 # If this flag is true, search my various lists of RSS feeds
-specific_news = True
+specific_news = False
 
 # Flag to check Google News
-google_french = True
+google_french = False
 google_english = True
 
 # filter for the google search
-valid_dates = ["22 Jun","23 Jun"]
+valid_dates = ["24 Jun","25 Jun","26 Jun"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -157,6 +157,7 @@ filtered_urls = filtered_urls + used_urls
 rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr&when:7d"
 
 if google_french:
+    print("BEGINNING GOOGLE NEWS FRENCH")
     try:
         print(rss)
         feed = feedparser.parse(rss)
@@ -187,6 +188,7 @@ filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.
 rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
 
 if google_english:
+    print("BEGINNING GOOGLE NEWS ENGLISH")
     try:
         print(rss)
         feed = feedparser.parse(rss)

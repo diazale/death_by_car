@@ -88,3 +88,7 @@
 "483","2","","","","dead","",""
 "485","1","M","","","unspecified injury","intersection",""
 "487","1","M","12","","uninjured","intersection",""
+"493","1","","","adult","minor injury","bike path",""
+"494","1","M","14","","non-life-threatening injury","",""
+"495","1","","65","","minor injury","",""
+"497","1","","","under 12","non-life-threatening injury","",""

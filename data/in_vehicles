@@ -180,3 +180,8 @@
 "481","1","1","1","M","39","","uninjured","",""
 "483","1","1","1","","","","serious injury","",""
 "487","1","1","1","M","25","","uninjured","","charged"
+"493","1","1","1","M","","elderly","uninjured","","charged"
+"501","1","1","1","F","","","uninjured","",""
+"502","2","1","0","","","","minor injury","",""
+"502","2","2","0","","","","minor injury","",""
+"503","1","1","1","M","","adult","uninjured","","arrested, deliberate, struck ex-girlfriend"
