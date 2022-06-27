@@ -77,6 +77,7 @@ vehicle_types[["streetcar"]] <- "Bus or streetcar"
 vehicle_types[["mail truck"]] <- "Large truck"
 vehicle_types[["cement truck"]] <- "Large truck"
 vehicle_types[["street sweeper"]] <- "Other"
+vehicle_types[["excavator"]] <- "Other"
 
 ##### Age groups #####
 # Age group (Under or Over 18)
@@ -116,6 +117,7 @@ age_ranges[["boy, youth"]] <- "Under 18"
 age_ranges[["adolescent"]] <- "Under 18"
 age_ranges[["16 to 21"]] <- "Under 18"
 age_ranges[["late 60s"]] <- "65 and older"
+age_ranges[["under 12"]] <- "Under 18"
 
 ##### Metro areas #####
 
