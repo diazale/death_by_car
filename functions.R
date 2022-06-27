@@ -24,7 +24,7 @@ subset_by_date <- function(data_, min_date_=NA, max_date_=NA){
   # Subset the incidents by the dates desired
   if (!is.na(min_date_) & !is.na(max_date_)){
     # Both min and max dates provided, give all data between.
-    return(subset(incidents, lubridate::ymd(min_date_) <= date & date <= lubridate::ymd(max_date_)))
+    return(subset(incidents, lubridate::ymd(max_date_) <= date & date <= lubridate::ymd(min_date_)))
   } else if (!is.na(min_date_)){
     # No max date: give everything after the min date
     return(subset(incidents, lubridate::ymd(min_date_) <= date))
