@@ -118,6 +118,8 @@ age_ranges[["adolescent"]] <- "Under 18"
 age_ranges[["16 to 21"]] <- "Under 18"
 age_ranges[["late 60s"]] <- "65 and older"
 age_ranges[["under 12"]] <- "Under 18"
+age_ranges[["60s or 70s"]] <- "65 and older"
+age_ranges[["40s or 50s"]] <- "18 to 64"
 
 ##### Metro areas #####
 

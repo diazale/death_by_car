@@ -53,7 +53,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ["26 Jun","27 Jun"]
+valid_dates = ["28 Jun"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -179,7 +179,7 @@ if google_french:
         print("Exception", e2, "Error with:", rss)
 
 ########## Google English ##########
-search_keys = ["pedestrian","cyclist","struck","bicycle"]
+search_keys = ["(pedestrian&struck)","pedestrian","(cyclist&struck)","cyclist","struck","bicycle"]
 filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.com","mlive.com", \
                  "wgntv.com",".au","wreg.com","tmj4","indianexpress","abc","nbc","al.com",".ie",".co.nz"] # filter out non-ca news
 
