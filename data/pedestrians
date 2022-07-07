@@ -422,3 +422,7 @@
 "546","1","M","","adult","","road",""
 "547","1","F","70","","dead","intersection",""
 "548","1","M","","adult","life-threatening injury","",""
+"550","1","M","19","","critical injury","",""
+"551","1","M","52","","dead","",""
+"552","1","","","","serious injury","",""
+"555","1","M","35","","dead","road","laying down on road"

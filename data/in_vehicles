@@ -207,4 +207,5 @@
 "539","1","1","1","","","adult","uninjured","","medical incident"
 "540","1","1","1","F","","adult","","","charged, impaired"
 "540","1","2","0","M","","adult","","","charged"
-"549","1","1","1","F","35","","uninjured","",""
+"549","1","1","1","F","35","","uninjured","","charged"
+"552","1","1","1","M","31","","uninjured","","charged"
