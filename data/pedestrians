@@ -428,3 +428,5 @@
 "555","1","M","35","","dead","road","laying down on road"
 "557","1","","7","","minor injury","parking lot",""
 "560","1","M","","adult","serious injury","road",""
+"561","1","F","30","","critical injury","sidewalk","walking with son"
+"561","2","M","10","","life-altering injury","sidewalk","walking with mom"
