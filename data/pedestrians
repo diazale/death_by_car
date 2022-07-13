@@ -430,3 +430,7 @@
 "560","1","M","","adult","serious injury","road",""
 "561","1","F","30","","critical injury","sidewalk","walking with son"
 "561","2","M","10","","life-altering injury","sidewalk","walking with mom"
+"561","3","M","29","","minor injury","sidewalk","walking with wife and son"
+"562","1","","","","taken to hospital with injury","",""
+"563","1","M","","50s","life-threatening injury","",""
+"565","1","","","adult","minor injury","",""
