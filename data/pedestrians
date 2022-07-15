@@ -438,5 +438,8 @@
 "571","1","F","72","","dead","intersection",""
 "573","1","M","75","","non-life-threatening injury","intersection",""
 "574","1","M","12","","serious injury","bus stop",""
+"574","2","","","child","minor injury","",""
+"574","3","","","child","minor injury","",""
+"574","4","F","","adult","minor injury","bus stop","mother of the children"
 "575","1","","","child","uninjured","lake","near miss"
 "576","1","M","","adult","critical injury","",""
