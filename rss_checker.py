@@ -53,7 +53,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ["14 Jul","15 Jul"]
+valid_dates = ["15 Jul"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -113,7 +113,7 @@ if specific_news:
                             entry["link"] not in used_urls:
                             print()
                             print("Keyword match:", entry["title"])
-                            print("Link:", entry["link"])
+                            print("Link:", entry["link"].split("?cmp=rss")[0])
                             print("Published:", entry["published"])
 
                             print()
@@ -170,7 +170,7 @@ if google_french:
                         not any(bl in entry["link"].lower() for bl in filtered_urls):
                     print()
                     print(entry["title"])
-                    print(entry["link"])
+                    print(entry["link"].split("?cmp=rss")[0])
                     print(entry["published"])
 
         except Exception as e1:
@@ -202,7 +202,7 @@ if google_english:
                         not any(bl in entry["link"].lower() for bl in filtered_urls):
                     print()
                     print(entry["title"])
-                    print(entry["link"])
+                    print(entry["link"].split("?cmp=rss")[0])
                     print(entry["published"])
 
         except Exception as e1:
