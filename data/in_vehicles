@@ -219,3 +219,7 @@
 "581","1","1","1","F","","adult","minor injury","",""
 "582","1","1","1","F","55","","uninjured","",""
 "583","1","1","1","M","","adult","uninjured","","charged, impaired"
+"589","1","1","1","M","56","","uninjured","","charged"
+"593","1","1","1","M","","","taken to hospital with injury","","medical incidnent"
+"593","1","2","0","","","","taken to hospital with injury","",""
+"593","2","1","1","F","","","taken to hospital with injury","",""

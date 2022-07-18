@@ -41,3 +41,5 @@
 "540","1","residential","damaged",""
 "558","1","residential","damaged","shed, house, fire hydrant"
 "581","1","non-residential","heavily damaged","gas station"
+"592","1","non-residential","damaged","barber shop"
+"593","1","non-residential","heavily damaged","barber shop"

@@ -123,3 +123,8 @@
 "571","1","F","","40s","","",""
 "587","1","F","29","","dead","",""
 "587","2","M","30","","life-threatening injury","",""
+"588","1","","","youth","minor injury","",""
+"588","2","","","youth","","",""
+"588","3","","","youth","","",""
+"589","1","","","","non-life-threatening injury","road",""
+"591","1","M","","adult","life-threatening injury","road",""
