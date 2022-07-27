@@ -476,3 +476,7 @@
 "609","1","M","56","","dead","",""
 "612","1","M","24","","critical injury","crossing",""
 "613","1","M","46","","critical injury","road",""
+"618","1","F","5","","critical injury","sidewalk",""
+"618","2","M","","adult","uninjured","sidewalk",""
+"618","3","","","child","uninjured","sidewalk",""
+"618","4","","","child","uninjured","sidewalk",""
