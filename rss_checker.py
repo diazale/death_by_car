@@ -15,22 +15,23 @@ ts = datetime.timestamp(datetime.now())
 
 feed_dir = "rss_feeds"
 
-# feeds_to_check = {
-#     "CBC":"cbc_rss.txt",
-#     "Radio-Canada":"radio_canada_rss.txt",
-#     "Global":"global_rss.txt",
-#     "CTV":"ctvnews_rss.txt",
-#     "QC":"quebec_fixed_rss.txt",
-#     "Nitter_fr":"nitter_fr_rss.txt",
-#     "Nitter_en":"nitter_en_rss.txt"}
+feeds_to_check = {
+     "CBC":"cbc_rss.txt",
+     "Radio-Canada":"radio_canada_rss.txt",
+     "Global":"global_rss.txt",
+     "CTV":"ctvnews_rss.txt",
+     "QC":"quebec_fixed_rss.txt",
+     "Nitter_fr":"nitter_fr_rss.txt",
+     "Nitter_en":"nitter_en_rss.txt"}
 feeds_to_check_en = {
     "CBC":"cbc_rss.txt",
     "Global":"global_rss.txt",
     "CTV":"ctvnews_rss.txt",
     "Nitter_en":"nitter_en_rss.txt"}
+
 feeds_to_check_fr = {
-    "Radio-Canada":"radio_canada_rss.txt",
-    "QC":"quebec_fixed_rss.txt",
+    #"Radio-Canada":"radio_canada_rss.txt",
+    #"QC":"quebec_fixed_rss.txt",
     "Nitter_fr":"nitter_fr_rss.txt"}
 
 # Import keywords as a list
@@ -53,7 +54,7 @@ google_french = False
 google_english = False
 
 # filter for the google search
-valid_dates = ["27 Jul","28 Jul"]
+valid_dates = ["28 Jul","29 Jul","30 Jul"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
