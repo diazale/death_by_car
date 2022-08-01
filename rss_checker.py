@@ -30,8 +30,8 @@ feeds_to_check_en = {
     "Nitter_en":"nitter_en_rss.txt"}
 
 feeds_to_check_fr = {
-    #"Radio-Canada":"radio_canada_rss.txt",
-    #"QC":"quebec_fixed_rss.txt",
+    "Radio-Canada":"radio_canada_rss.txt",
+    "QC":"quebec_fixed_rss.txt",
     "Nitter_fr":"nitter_fr_rss.txt"}
 
 # Import keywords as a list
@@ -49,12 +49,13 @@ master_urls = []
 # If this flag is true, search my various lists of RSS feeds
 specific_news = True
 
+
 # Flag to check Google News
-google_french = False
-google_english = False
+google_french = True
+google_english = True
 
 # filter for the google search
-valid_dates = ["28 Jul","29 Jul","30 Jul"]
+valid_dates = ["31 Jul","1 Aug"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
