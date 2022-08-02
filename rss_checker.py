@@ -49,13 +49,12 @@ master_urls = []
 # If this flag is true, search my various lists of RSS feeds
 specific_news = True
 
-
 # Flag to check Google News
 google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ["31 Jul","1 Aug"]
+valid_dates = ["1 Aug","2 Aug"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
