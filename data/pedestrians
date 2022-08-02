@@ -495,3 +495,6 @@
 "631","1","F","","young","dead","road","skateboarding"
 "631","2","M","","young","uninjured","road","skateboarding"
 "637","1","F","","adult","non-life-threatening injury","intersection",""
+"639","1","F","","59","dead","bench",""
+"639","2","F","","18","non-life-threatening injury","bench",""
+"641","1","M","70","","dead","",""
