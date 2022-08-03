@@ -22,17 +22,20 @@ feeds_to_check = {
      "CTV":"ctvnews_rss.txt",
      "QC":"quebec_fixed_rss.txt",
      "Nitter_fr":"nitter_fr_rss.txt",
-     "Nitter_en":"nitter_en_rss.txt"}
+     "Nitter_en":"nitter_en_rss.txt"
+}
 feeds_to_check_en = {
     "CBC":"cbc_rss.txt",
     "Global":"global_rss.txt",
     "CTV":"ctvnews_rss.txt",
-    "Nitter_en":"nitter_en_rss.txt"}
+    "Nitter_en":"nitter_en_rss.txt"
+}
 
 feeds_to_check_fr = {
     "Radio-Canada":"radio_canada_rss.txt",
     "QC":"quebec_fixed_rss.txt",
-    "Nitter_fr":"nitter_fr_rss.txt"}
+    "Nitter_fr":"nitter_fr_rss.txt"
+}
 
 # Import keywords as a list
 keywords_en = [k for k in open("keywords_en.txt", "r").read().rstrip().split("\n")]
