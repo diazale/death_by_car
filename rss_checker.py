@@ -54,7 +54,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ["2 Aug"]
+valid_dates = ["3 Aug"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -151,7 +151,7 @@ else:
 
 search_keys = ["pi%C3%A9ton","pieton","cyclist","happe","happ%C3%A9","percut%C3%A9","percute"]
 filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","lejsl",".re",".lu",
-                 "infonormandie",".mu",".ma"] # filter out non-qc news
+                 "infonormandie",".mu",".ma","lavenir.net"] # filter out non-qc news
 
 filtered_urls = filtered_urls + used_urls
 
@@ -183,7 +183,7 @@ if google_french:
 search_keys = ["(pedestrian&struck)","pedestrian","(cyclist&struck)","cyclist","struck","bicycle"]
 filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.com","mlive.com", \
                  "wgntv.com",".au","wreg.com","tmj4","indianexpress","abc","nbc","al.com",".ie",".co.nz",
-                 "pedestrian.tv"] # filter out non-ca news
+                 "pedestrian.tv",".in"] # filter out non-ca news
 
 #filtered_urls = filtered_urls + used_urls
 
