@@ -57,7 +57,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ["8 Aug"]
+valid_dates = ["9 Aug"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -154,7 +154,7 @@ else:
 
 search_keys = ["pi%C3%A9ton","pieton","cyclist","happe","happ%C3%A9","percut%C3%A9","percute"]
 filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","lejsl",".re",".lu",
-                 "infonormandie",".mu",".ma","lavenir.net"] # filter out non-qc news
+                 "infonormandie",".mu",".ma","lavenir.net","corsematin"] # filter out non-qc news
 
 filtered_urls = filtered_urls + used_urls
 
