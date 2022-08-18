@@ -491,7 +491,7 @@
 "626","1","","16","","taken to hospital with injury","","struck by goat hit by vehicle"
 "627","1","","","","minor injury","",""
 "628","1","F","","","","","rollerblading"
-"629","1","M","","adult","dead","",""
+"629","1","M","22","","dead","crossing",""
 "637","1","F","","adult","non-life-threatening injury","intersection",""
 "639","1","F","","59","dead","bench",""
 "639","2","F","","18","non-life-threatening injury","bench",""
@@ -535,3 +535,4 @@
 "699","1","","","young child","non-life-threatening injury","driveway","reversed into child"
 "701","1","M","","adult","serious injury","",""
 "704","1","M","","70s","dead","intersection",""
+"706","1","M","","adult","non-life-threatening injury","",""
