@@ -130,7 +130,7 @@ age_ranges[["young child"]] <- "Under 18"
 # Look at regions and classify as Greater [X] Area
 greater_toronto <- c("Ajax","Aurora","Brampton","Brock","Burlington","Caledon","Clarington","East Gwillimbury","Etobicoke","Georgina",
                      "Halton Hills","King","Markham","Milton","Mississauga","Newmarket","Oakville","Oshawa","Pickering",
-                     "Richmond Hill","Scugog","Toronto","Uxbridge","Vaughan","Whitby","Whitchurch-Stouffville")
+                     "Richmond Hill","Scugog","Thornhill","Toronto","Uxbridge","Vaughan","Whitby","Whitchurch-Stouffville")
 greater_montreal <- c()
 greater_vancouver <- c()
 greater_victoria <- c()
