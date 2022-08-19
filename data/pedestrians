@@ -542,5 +542,6 @@
 "711","1","M","10","","critical injury","road","sledding onto road"
 "712","1","F","","20s","taken to hospital with injury","crossing",""
 "714","1","M","2","","dead","parking lot",""
-"715","1","F","","","life-threatening injury","road","wheelchair on highway, unusual"
-"716","1","","","","critical injury","crossing","in crosswalk"
+"715","1","F","","20s","dead","road","wheelchair on highway, unusual"
+"716","1","","","","critical injury","crosswalk","in crosswalk"
+"717","1","","40","","serious injury","",""
