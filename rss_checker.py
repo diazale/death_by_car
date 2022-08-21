@@ -57,7 +57,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ["20 Aug"]
+valid_dates = ["21 Aug"]
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -76,7 +76,6 @@ if specific_news:
                 feed = feedparser.parse(rss)
                 try:
                     for entry in feed["entries"]:
-
 
                         if (any(k in entry["title"].lower() for k in keywords_fr) or \
                             any(k in entry["link"].lower() for k in keywords_fr) or \
