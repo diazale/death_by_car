@@ -165,3 +165,6 @@
 "734","2","","","","uninjured","road",""
 "740","1","M","59","","serious injury","road","concussion, 3 broken ribs, punctured lung"
 "742","1","M","","adult","serious injury","",""
+"744","1","","","child","minor injury","intersection",""
+"744","2","","","child","uninjured","intersection",""
+"744","3","","","child","uninjured","intersection",""
