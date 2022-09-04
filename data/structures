@@ -68,3 +68,7 @@
 "738","1","residential","damaged","home, fence, support pole, yard damaged"
 "748","1","non-residential","heavily damaged",""
 "759","1","residential","heavily damaged","home, wall caved in about a metre"
+"781","1","non-residential","heavily damaged","car wash"
+"782","1","non-residential","heavily damaged","truck wash"
+"783","1","non-residential","damaged","car wash"
+"786","1","non-residential","damaged","auto trader"
