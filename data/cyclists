@@ -176,3 +176,6 @@
 "760","1","M","8","","serious injury","",""
 "769","1","F","56","","serious injury","road",""
 "772","1","F","41","","non-life-threatening injury","intersection","biked through red"
+"775","1","M","64","","dead","intersection","vehicle turned left into cyclist"
+"776","1","M","","40s","dead","",""
+"778","1","","25","","non-life-threatening injury","intersection",""

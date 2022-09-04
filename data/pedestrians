@@ -586,3 +586,7 @@
 "767","1","M","","late 20s","dead","road",""
 "768","1","","","adult","minor injury","",""
 "770","1","","","adult","dead","crossing",""
+"774","1","M","","adult","non-life-threatening injury","",""
+"778","1","M","26","","uninjured","intersection",""
+"778","2","M","65","","life-threatening injury","intersection",""
+"779","1","M","26","","serious injury","crossing",""
