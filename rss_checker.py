@@ -153,7 +153,7 @@ else:
 
 search_keys = ["pi%C3%A9ton","pieton","cyclist","happe","happ%C3%A9","percut%C3%A9","percute"]
 filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","lejsl",".re",".lu",
-                 "infonormandie",".mu",".ma","lavenir.net","corsematin",".corsica","ivoire"] # filter out non-qc news
+                 "infonormandie",".mu",".ma","lavenir.net","corsematin",".corsica","ivoire","bienpublic"] # filter out non-qc news
 
 filtered_urls = filtered_urls + used_urls
 
