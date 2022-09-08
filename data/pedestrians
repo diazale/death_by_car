@@ -603,3 +603,6 @@
 "806","1","F","76","","life-threatening injury","",""
 "807","1","","","","minor injury","parking lot",""
 "808","1","F","","40s","non-life-threatening injury","crossing",""
+"809","1","","","","serious injury","crosswalk",""
+"810","1","F","","30s","serious injury","sidewalk","multi vehicle collision, car was hit onto sidewalk"
+"811","1","","","","unspecified injury","",""
