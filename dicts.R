@@ -78,6 +78,7 @@ vehicle_types[["commercial truck"]] <- "Large truck"
 vehicle_types[["streetcar"]] <- "Bus or streetcar"
 vehicle_types[["mail truck"]] <- "Large truck"
 vehicle_types[["cement truck"]] <- "Large truck"
+vehicle_types[["landscape truck"]] <- "Large truck"
 vehicle_types[["street sweeper"]] <- "Other"
 vehicle_types[["excavator"]] <- "Other"
 
