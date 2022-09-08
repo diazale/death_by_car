@@ -48,8 +48,12 @@ incidents <- read_csv("data/incidents", col_names = TRUE,
                         col_character(),
                         col_character(),
                         col_double(),
+                        col_character(),
                         col_character()
                       ))
+
+# Drop notes
+incidents <- incidents[,-c(which(colnames(incidents)=="notes"))]
 
 # Add DOW
 incidents$dow <- lubridate::wday(incidents$date, label = T)

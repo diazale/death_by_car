@@ -47,6 +47,7 @@ injury_categories[["sever injury"]] <- "Major"
 
 ##### Vehicle classes #####
 vehicle_types <- c()
+vehicle_types[["sedan"]] <- "Car"
 vehicle_types[["car"]] <- "Car"
 vehicle_types[["SUV"]] <- "SUV"
 vehicle_types[["truck"]] <- "Truck"

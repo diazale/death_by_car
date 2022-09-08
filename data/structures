@@ -74,3 +74,5 @@
 "786","1","non-residential","damaged","auto trader"
 "793","1","residential","heavily damaged","house, fence and deck destroyed, wall caved in"
 "798","1","non-residential","destroyed",""
+"804","1","residential","damaged","house, garage and backyard damaged"
+"805","1","non-residential","destroyed","community centre"
