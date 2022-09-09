@@ -310,6 +310,7 @@
 "781","1","1","1","M","","","taken to hospital with injury","",""
 "785","1","1","1","","","","uninjured","",""
 "786","1","1","1","","","","uninjured","",""
+"787","1","1","1","M","30","","uninjured","","arrested, charged"
 "788","1","1","1","M","37","","uninjured","","arrested, charged"
 "789","1","1","1","","","80s","uninjured","","shock"
 "793","1","1","1","","","","serious injury","",""
@@ -320,3 +321,5 @@
 "805","1","1","1","M","70","","minor injury","",""
 "807","1","1","1","","","","uninjured","","ticketed"
 "812","1","1","1","M","","adult","taken to hospital with injury","",""
+"815","1","1","1","M","27","","dead","",""
+"816","1","1","1","","","","uninjured","","charged"
