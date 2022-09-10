@@ -609,3 +609,7 @@
 "813","1","","","","head injury","",""
 "817","1","M","65","","minor injury","crossing",""
 "818","1","M","","adult","minor injury","","dragged, employee at store robbery"
+"822","1","","","youth","taken to hospital with injury","crossing","student"
+"822","2","","","youth","taken to hospital with injury","crossing","student"
+"822","3","","","youth","taken to hospital with injury","crossing","student"
+"825","1","","","","critical injury","sidewalk",""
