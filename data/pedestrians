@@ -619,3 +619,8 @@
 "828","2","F","","child","minor injury","parking lot","in stroller"
 "829","1","F","","adult","serious injury","crossing","city councillor"
 "830","1","F","56","","dead","crossing",""
+"831","1","F","","20s","life-threatening injury","crossing",""
+"832","1","F","40","","non-life-threatening injury","crossing",""
+"834","1","M","26","","life-threatening injury","parking lot",""
+"835","1","M","12","","serious injury","","entering car while on scooter"
+"837","1","","","","unspecified injury","",""
