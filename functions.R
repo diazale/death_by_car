@@ -56,3 +56,26 @@ group_ages <- function(in_data){
   
   return(in_data)
 }
+
+generate_subsets <- function(ids_){
+  # Given a vector of incident IDs, generate a subset of all data frames
+  # Input: ids (vector)
+  # Output: List of data frames of incidents, sources, vehicles, pedestrians, cyclists, others, structures, people in vehicles
+  incidents_subs <- subset(incidents, incident_id %in% ids_)
+  sources_subs <- subset(sources, incident_id %in% ids_)
+  vehicles_subs <- subset(vehicles, incident_id %in% ids_)
+  pedestrians_subs <- subset(pedestrians, incident_id %in% ids_)
+  cyclists_subs <- subset(cyclists, incident_id %in% ids_)
+  others_subs <- subset(others, incident_id %in% ids_)
+  in_vehicles_subs <- subset(in_vehicles, incident_id %in% ids_)
+  structures_subs <- subset(structures, incident_id %in% ids_)
+  
+  return(list(incidents_subs,
+              sources_subs,
+              vehicles_subs, 
+              pedestrians_subs,
+              cyclists_subs,
+              others_subs,
+              in_vehicles_subs,
+              structures_subs))
+}
