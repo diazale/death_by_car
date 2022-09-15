@@ -83,3 +83,6 @@
 "819","3","F","","adult","minor injury","indoors, home","sleeping, 31 weeks pregnant, slipped in spilled gas, taken to hospital as precaution"
 "825","1","","","adult","uninjured","indoors, store","employee"
 "845","1","","","adult","non-life-threatening injury","road","police officer, traffic stop"
+"850","1","","","","uninjured","","displaced, home damaged"
+"850","2","","","","uninjured","","displaced, home damaged"
+"850","3","","","","uninjured","","displaced, home damaged"
