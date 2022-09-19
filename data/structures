@@ -93,3 +93,6 @@
 "850","6","residential","heavily damaged","apartment"
 "851","1","residential","destroyed","building was being converted into apartments"
 "855","1","residential","damaged","brick wall of townhome caved in"
+"862","1","non-residential","destroyed","bus shelter"
+"863","1","residential","damaged","home, no structural damage"
+"865","1","non-residential","damaged","gas line struck"
