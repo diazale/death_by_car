@@ -92,3 +92,8 @@
 "863","3","","","child","uninjured","indoors, home",""
 "884","1","","","adult","non-life-threatening injury","road","fixing stalled forklift"
 "884","2","","","adult","uninjured","road","fixing stalled forklift"
+"894","1","","","","uninjured","indoors",""
+"895","1","","","","uninjured","indoors, employee",""
+"896","1","M","","","minor injury","indoors, home",""
+"896","2","F","","","uninjured","indoors, home",""
+"897","1","M","","adult","dead","road","ATV"
