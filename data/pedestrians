@@ -687,3 +687,8 @@
 "916","1","M","","adult","taken to hospital with injury","",""
 "917","1","F","","","unknown injury","parking lot","got into the vehicle that hit her"
 "918","1","M","","adult","minor injury","intersection","skateboarding"
+"919","1","","","","life-threatening injury","",""
+"920","1","M","60","","dead","",""
+"922","1","F","21","","non-life-threatening injury","sidewalk","video available, walking on sidewalk"
+"923","1","F","","adult","dead","",""
+"924","1","M","","elderly","dead","crossing","motorized wheelchair"
