@@ -4,7 +4,7 @@
 
 Each year in Canada, hundreds of pedestrians, cyclists, and workers are killed or badly wounded by drivers and their vehicles. It is a widespread, pervasive, and systemic problem; it is not limited to urban, suburban, or rural areas; it affects people of all ages. For many, it is the deadliest aspect of daily life.
 
-The goal of this project is to track how many people are killed and injured by vehicles in Canada, in particular those who are not in vehicles themselves. I will be tweeting tallies and various findings via [@DeathByCar](https://twitter.com/DeathByCar).
+The goal of this project is to scan news sources and track how many people are killed and injured by vehicles in Canada, in particular those who are not in vehicles themselves. I will be tweeting tallies and various findings via [@DeathByCar](https://twitter.com/DeathByCar).
 
 ## Scope
 
@@ -27,7 +27,7 @@ Data are organized into several tables. Each incident has an `incident_id` varia
 *  `cyclists`: Cyclists involved
 *  `other`: People involved who are not strictly pedestrians or cyclists, such as road workers, firefighters, EMS, people changing a tire, snowmobilers, horse-and-buggy, etc.
 *  `in_vehicle`: People in the vehicles involved, where available. The `driver` flag is set to `1` to indicate that the individual was driving the vehicle at the time. Injury status is noted where available. Notes mention if there were arrests, charges, whether the strike was deliberate, etc.
-* `structures`: Structures hit by drivers/vehicles, categorized as residential or non-residential. These are included when there is significant damage and/or victimization, even if no physical injuries are reported. While most are buildings, some are not (e.g. things like gazebos, sheds, patios, etc.)
+* `structures`: Structures hit by drivers/vehicles, categorized as residential or non-residential. These are included when there is significant damage and/or victimization, even if no physical injuries are reported. While most are buildings, some are not (e.g. things like gazebos, sheds, patios, etc.). Damage is classified as "damaged" (e.g. a cracked window or door), "heavily damaged" (e.g. a structure or part of it is at least temporarily unusable), or "destroyed".
 
 ## Citation
 
