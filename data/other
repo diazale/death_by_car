@@ -100,3 +100,6 @@
 "925","1","F","","adult","uninjured","indoors, home","mentions significant distress and loss of sleep, repeatedly complained to city about traffic"
 "934","1","","","adult","uninjured","road","police officer, near miss, traffic stop"
 "940","1","","","","dead","construction site",""
+"946","1","F","23","","dead","highway shoulder","struck after exiting vehicle after minor collision"
+"946","2","","","adult","minor injury","highway shoulder","struck after exiting vehicle after minor collision"
+"946","3","","","","uninjured","highway shoulder","near miss, exited vehicle to help others"
