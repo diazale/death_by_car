@@ -117,4 +117,6 @@
 "955","1","non-residential","heavily damaged","Liquor store, door and window heavily damaged"
 "956","1","residential","damaged","apartment building, damage unclear, bench destroyed"
 "957","1","non-residential","heavily damaged","Andres Car Audio, window smashed, interior damaged"
-"965","1","residential","unspecified",""
+"965","1","residential","damaged","damage not specified, vehicle collided with home"
+"971","1","residential","damaged","damage not specified, police service describe it as a serious collision"
+"972","1","residential","damaged","house sustained minor damage after a truck slid into it"
