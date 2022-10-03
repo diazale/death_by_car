@@ -15,3 +15,5 @@ https://nitter.net/saltwirenetwork/rss
 https://nitter.net/OPP_HSD/rss
 https://nitter.net/torontopolice/rss
 https://nitter.net/NiaFallsReview/rss
+https://nitter.net/TheProgress/rss
+https://nitter.net/KelownaCapNews/rss

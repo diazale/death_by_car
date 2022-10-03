@@ -398,3 +398,8 @@
 "956","1","1","1","","","","","","blacked out, walked to ambulance"
 "957","1","1","1","","","","","","possible medical incident"
 "960","1","1","1","M","","20s","uninjured","",""
+"962","1","1","1","","","","uninjured","",""
+"962","1","2","0","","","","uninjured","",""
+"966","1","1","1","M","","60s","uninjured","","article says he was unable to avoid the pedestrian"
+"965","1","1","1","M","","adult","uninjured","","arrested, drug-related"
+"965","1","2","0","M","","adult","serious injury","",""
