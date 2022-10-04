@@ -106,4 +106,7 @@
 "949","1","F","","adult","uninjured","indoors, home","no longer feels safe at home"
 "949","2","M","","adult","uninjured","indoors, home",""
 "971","1","M","","","uninjured","indoors, home","in the basement and heard a bang"
-"977","1","F","","adult","uninjured","indoors, next door","near miss, was next door"
+"977","1","F","","adult","uninjured","next door","near miss, was next door"
+"977","2","","","adult","uninjured","away","resident"
+"977","3","","","adult","uninjured","away","resident"
+"977","4","","","infant","uninjured","away","resident"

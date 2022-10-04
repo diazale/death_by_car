@@ -408,7 +408,7 @@
 "971","1","1","1","M","18","","minor injury","","medical incident"
 "972","1","1","1","M","56","","uninjured","","charged, impaired"
 "975","1","1","1","F","69","","uninjured","","charged with start from stopped position – not in safety"
-"977","1","1","1","M","","adult","minor injury","",""
+"977","1","1","1","M","","adult","taken to hospital with injury","",""
 "978","1","1","1","M","","","uninjured","","carjacker"
 "978","2","1","0","M","","","uninjured","","accomplice"
 "978","3","1","0","M","","","uninjured","","accomplice"
