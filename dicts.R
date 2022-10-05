@@ -134,7 +134,9 @@ age_ranges[["young child"]] <- "Under 18"
 greater_toronto <- c("Ajax","Aurora","Brampton","Brock","Burlington","Caledon","Clarington","East Gwillimbury","Etobicoke","Georgina",
                      "Halton Hills","King","Markham","Milton","Mississauga","Newmarket","Oakville","Oshawa","Pickering",
                      "Richmond Hill","Scugog","Thornhill","Toronto","Uxbridge","Vaughan","Whitby","Whitchurch-Stouffville")
-greater_montreal <- c()
+greater_montreal <- c("Montreal","Laval","Longueuil","Terrebonne","Brossard","Saint-Jérôme","Blainville","Mirabel",
+                      "Dollard-Des Ormeaux")
+
 greater_vancouver <- c()
 greater_victoria <- c()
 
