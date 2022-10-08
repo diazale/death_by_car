@@ -211,3 +211,7 @@
 "958","1","","","","unspecified injury","intersection",""
 "959","1","M","","","taken to hospital with injury","intersection",""
 "964","1","M","","adult","serious injury","",""
+"988","1","F","","","minor injury","driveway to parking lot","grocery store lot"
+"989","1","M","65","","life-threatening injury","crossing","crossing onramp, tone-deaf police tweet"
+"991","1","F","","adult","minor injury","intersection","cycling with infant, problematic intersection"
+"991","2","","","infant","uninjured","intersection","in cart behind bike"

@@ -408,6 +408,7 @@
 "971","1","1","1","M","18","","minor injury","","medical incident"
 "972","1","1","1","M","56","","uninjured","","charged, impaired"
 "975","1","1","1","F","69","","uninjured","","charged with start from stopped position – not in safety"
+"976","1","1","1","M","47","","uninjured","","charged after 5-day search"
 "977","1","1","1","M","","adult","taken to hospital with injury","",""
 "978","1","1","1","M","","","uninjured","","carjacker"
 "978","2","1","0","M","","","uninjured","","accomplice"
@@ -417,3 +418,5 @@
 "984","1","1","1","M","33","","","","charged, impaired"
 "984","1","2","0","","","","non-life-threatening injury","",""
 "985","1","1","1","F","28","","uninjured","","charged wth failure to yield"
+"986","1","1","1","M","29","","uninjured","","arrested, charged"
+"992","1","1","1","M","60","","dead","","hit moose and garage, died two days later"
