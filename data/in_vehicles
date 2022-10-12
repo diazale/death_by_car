@@ -37,6 +37,7 @@
 "95","1","1","1","M","59","","uninjured","","charged with impaired driving"
 "97","1","1","1","F","33","","uninjured","",""
 "105","1","1","1","M","31","","uninjured","","charged"
+"108","1","1","1","M","19","","uninjured","","fled the country"
 "109","1","1","1","M","45","","uninjured","","bus driver"
 "110","1","1","1","M","66","","uninjured","",""
 "112","1","1","1","M","50","","uninjured","","charged"
@@ -429,3 +430,4 @@
 "1004","1","1","1","F","","20s","uninjured","","distracted"
 "1006","1","1","1","M","46","","uninjured","",""
 "1013","1","1","1","M","51","","uninjured","","arrested, charged"
+"1016","1","1","1","F","50","","","","arrested, also shot man with BB gun"
