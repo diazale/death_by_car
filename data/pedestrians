@@ -755,3 +755,5 @@
 "1019","1","M","","","dead","intersection",""
 "1020","1","F","","elderly","dead","","found without vital signs"
 "1021","1","","","","unknown","crossing","had right of way according to witness"
+"1024","1","M","80","","dead","crosswalk","died after a week in hospital"
+"1026","1","","","","minor injury","crosswalk",""

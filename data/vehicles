@@ -1050,3 +1050,6 @@
 "1021","1","sedan","","","","","fled the scene, turned right through red light without stopping"
 "1022","1","","","","","",""
 "1023","1","other","","","","","broken down vehicle on side of road"
+"1024","1","pickup truck","Ford","F150","","","fled the scene"
+"1025","1","delivery truck","","","","1",""
+"1026","1","","","","","",""
