@@ -124,3 +124,6 @@
 "982","2","residential","heavily damaged","garage heavily damaged"
 "992","1","residential","damaged","garage hit"
 "994","1","residential","damaged","front of house struck, outside of entrance damaged"
+"1042","1","residential","damaged",""
+"1043","1","residential","heavily damaged","crashed through fence and patio"
+"1043","2","non-residential","heavily damaged","park damaged, swing set destroyed"
