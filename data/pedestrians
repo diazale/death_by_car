@@ -767,3 +767,5 @@
 "1037","1","","","","taken to hospital with injury","",""
 "1040","1","","","","life-threatening injury","",""
 "1041","1","M","","minor","minor injury","",""
+"1044","1","","","","non-life-threatening injury","",""
+"1045","1","","","","dead","",""
