@@ -768,4 +768,7 @@
 "1040","1","","","","life-threatening injury","",""
 "1041","1","M","","minor","minor injury","",""
 "1044","1","","","","non-life-threatening injury","",""
-"1045","1","","","","dead","",""
+"1045","1","F","24","","dead","",""
+"1047","1","M","55","","taken to hospital with injury","",""
+"1048","1","M","","40s","dead","",""
+"1049","1","M","18","","non-life-threatening injury","crossing","came out of a ditch to cross, found unresponsive"
