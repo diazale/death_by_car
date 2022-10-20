@@ -440,6 +440,7 @@
 "1037","2","1","1","","","","minor injury","",""
 "1037","2","2","0","","","","uninjured","",""
 "1038","1","1","1","M","35","","","","charged, impaired"
+"1039","1","1","1","M","24","","uninjured","","arrested, multiple charges"
 "1041","1","1","1","M","79","","uninjured","","charged, may not have been fit to drive"
 "1042","1","1","1","","","","minor injury","","charged"
 "1042","1","2","0","","","","minor injury","","charged"
@@ -454,3 +455,5 @@
 "1060","1","1","1","","","70s","uninjured","",""
 "1060","2","1","1","M","","20s","","",""
 "1066","1","1","1","M","34","","uninjured","","vehicle impounded, charged with stunt driving"
+"1070","1","1","1","F","","adult","","",""
+"1073","1","1","1","M","","adult","uninjured","",""
