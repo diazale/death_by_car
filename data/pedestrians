@@ -580,7 +580,7 @@
 "761","1","M","24","","minor injury","side of road","walking on side of road"
 "762","1","F","","adult","minor injury","crossing","killed her dog, struck the woman"
 "762","2","M","","adult","uninjured","crossing",""
-"763","1","F","26","","dead","",""
+"763","1","F","26","","dead","crossing","unable to find her family"
 "764","1","M","39","","serious injury","parking lot","may never walk normally again, out of work for 9 months"
 "765","1","","","child","life-threatening injury","","scooter"
 "767","1","M","","late 20s","dead","road",""
@@ -806,3 +806,4 @@
 "1079","1","F","13","","serious injury","crossing","hospitalized"
 "1081","1","F","66","","life-threatening injury","crossing",""
 "1083","1","","85","","serious injury","","airlifted to hospital"
+"1084","1","F","","adult","serious injury","",""

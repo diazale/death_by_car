@@ -57,7 +57,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ['20 Oct']
+valid_dates = ['21 Oct']
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -155,7 +155,8 @@ search_keys = ["pi%C3%A9ton","pieton","cyclist","happe","happ%C3%A9","percut%C3%
 filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","lejsl",".re",".lu",
                  "infonormandie",".mu",".ma","lavenir.net","corsematin",".corsica","ivoire","bienpublic",
                  "tendanceouest","lanauweb","varmatin"] # filter out non-qc news
-filtered_words = ["France", ".fr",".re","7sur7","Var-matin","Alsace"]
+filtered_words = ["France", ".fr",".re","7sur7","Var-matin","Alsace","Martinique","20 Minutes",
+                  "Algerie","Le Télégramme","Le Progrès",".be","La Provence"]
 
 filtered_urls = filtered_urls + used_urls
 
@@ -190,7 +191,8 @@ filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.
                  "wgntv.com",".au","wreg.com","tmj4","indianexpress","abc","nbc","al.com",".ie",".co.nz",
                  "pedestrian.tv",".in"] # filter out non-ca news
 filtered_words = ["Boston.com","FOX","KTLA","KPRC","New York","Times of India","AL.com","Los Angeles",
-                  "Houston","NBC","ABC","Belfast","Michigan"]
+                  "Houston","NBC","ABC","Belfast","Michigan","Washington Post","sunchronicle",
+                  "The Republic","1News","CBS"]
 #filtered_urls = filtered_urls + used_urls
 
 rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
