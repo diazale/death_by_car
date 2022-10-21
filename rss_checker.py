@@ -156,7 +156,7 @@ filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","
                  "infonormandie",".mu",".ma","lavenir.net","corsematin",".corsica","ivoire","bienpublic",
                  "tendanceouest","lanauweb","varmatin"] # filter out non-qc news
 filtered_words = ["France", ".fr",".re","7sur7","Var-matin","Alsace","Martinique","20 Minutes",
-                  "Algerie","Le Télégramme","Le Progrès",".be","La Provence"]
+                  "Algerie","Le Télégramme","Le Progrès",".be","La Provence","Paris"]
 
 filtered_urls = filtered_urls + used_urls
 
