@@ -40,7 +40,7 @@ injury_categories[["life-altering injury"]] <- "Critical"
 injury_categories[["airlifted to hospital with injury"]] <- "Major"
 injury_categories[["significant non-life-threatening injury"]] <- "Major"
 injury_categories[["non life-threatening"]] <- "Major"
-injury_categories[["sever injury"]] <- "Major"
+injury_categories[["severe injury"]] <- "Critical"
 
 # Usage example:
 # pedestrians$injury_type <- injury_categories[match(as.character(pedestrians$status), names(injury_categories))]
@@ -82,6 +82,7 @@ vehicle_types[["landscape truck"]] <- "Large truck"
 vehicle_types[["street sweeper"]] <- "Other"
 vehicle_types[["excavator"]] <- "Other"
 vehicle_types[["logging truck"]] <- "Large truck"
+vehicle_types[["semi-truck"]] <- "Large truck"
 
 ##### Age groups #####
 # Age group (Under or Over 18)
