@@ -215,7 +215,7 @@
 "1005","1","","21","","serious injury","",""
 "1009","1","","","","","","no details provided"
 "1023","1","M","74","","dead","side of road","crashed into trailer behind immobilized truck"
-"1025","1","M","21","","dead","",""
+"1025","1","M","21","","dead","","BMX"
 "1027","1","","","","minor injury","crosswalk",""
 "1028","1","","","","taken to hospital with injury","",""
 "1029","1","M","48","","serious injury","intersection","head injury"
@@ -228,3 +228,4 @@
 "1074","1","M","60","","dead","","e-bike"
 "1080","1","M","21","fourth-year student","serious injury","bike lane","broken arm, clipped by mirror, will no longer bike on roads"
 "1097","1","M","","50s","serious injury","intersection","e-bike, head trauma, leg injuries"
+"1100","1","M","56","","taken to hospital with injury","","head and leg injuries"
