@@ -57,7 +57,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ['23 Oct']
+valid_dates = ['25 Oct']
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -157,7 +157,10 @@ filtered_urls = [".be",".fr",".vn",".ch","ledauphine","nicematin","laprovence","
                  "tendanceouest","lanauweb","varmatin"] # filter out non-qc news
 filtered_words = ["France", ".fr",".re","7sur7","Var-matin","Alsace","Martinique","20 Minutes",
                   "Algerie","Le Télégramme","Le Progrès",".be","La Provence","Paris","Midi Libre",
-                  "Calais", "Le Soir","Luxemburger","News 24","RTL"]
+                  "Calais", "Le Soir","Luxemburger","News 24","RTL","Le Bien Public","Le Defi Media",
+                  "Activ Radio","Haute Gironde","Le Dauphin","La Voix du Nord","MaCommune.info",
+                  "Le Berry","Nice Matin","Republican","Actu17","InsideNews","Yahoo","Marseille",
+                  "Bordeaux"]
 
 filtered_urls = filtered_urls + used_urls
 
@@ -193,7 +196,11 @@ filtered_urls = ["bbc.com","espn.com","washington",".co.uk","stv.tv",".gy","ksl.
                  "pedestrian.tv",".in"] # filter out non-ca news
 filtered_words = ["Boston.com","FOX","KTLA","KPRC","New York","Times of India","AL.com","Los Angeles",
                   "Houston","NBC","ABC","Belfast","Michigan","Washington Post","sunchronicle",
-                  "The Republic","1News","CBS","MassLive"]
+                  "The Republic","1News","CBS","MassLive","Route Fifty","BBC","Chicago","Reno",
+                  "Pasadena","WJHG","Spectrum News 1","San Francisco","Davis Enterprise","KAIT",
+                  "West Palm","York Daily Record","WHP Harrisburg","The News Leader","New Orleans",
+                  "Suffolk Times","Deltaplex News","Modesto","KFVS","Arizona","Hudson","KSBY",
+                  "Amarillo","WSMV","PennLive","Western Mass","Koam"]
 #filtered_urls = filtered_urls + used_urls
 
 rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
