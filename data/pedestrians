@@ -817,3 +817,8 @@
 "1099","1","M","","garçon","non-life-threatening injury","","concious when found, taken to hospital with injury"
 "1101","1","","","","serious injury","",""
 "1102","1","","","under 12","non-life-threatening injury","crosswalk",""
+"1103","1","F","8","","serious injury","crosswalk","ran across crosswalk, almost hit by car, then bit by short bus"
+"1104","1","F","","adult","non-life-threatening injury","","extent of injuries unknown, expected to survive"
+"1105","1","M","69","","critical injury","road","electric scooter, hit around a bend"
+"1106","1","M","","teen","critical injury","","student, hit it front of school"
+"1107","1","M","","20s","non-life-threatening injury","",""

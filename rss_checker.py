@@ -57,7 +57,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ['25 Oct']
+valid_dates = ['26 Oct']
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -160,7 +160,7 @@ filtered_words = ["France", ".fr",".re","7sur7","Var-matin","Alsace","Martinique
                   "Calais", "Le Soir","Luxemburger","News 24","RTL","Le Bien Public","Le Defi Media",
                   "Activ Radio","Haute Gironde","Le Dauphin","La Voix du Nord","MaCommune.info",
                   "Le Berry","Nice Matin","Republican","Actu17","InsideNews","Yahoo","Marseille",
-                  "Bordeaux"]
+                  "Bordeaux","- Sud Ouest"]
 
 filtered_urls = filtered_urls + used_urls
 
