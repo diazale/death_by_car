@@ -57,7 +57,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ['27 Oct','28 Oct']
+valid_dates = ['31 Oct']
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -160,7 +160,9 @@ filtered_words = ["France", ".fr",".re","7sur7","Var-matin","Alsace","Martinique
                   "Calais", "Le Soir","Luxemburger","News 24","RTL","Le Bien Public","Le Defi Media",
                   "Activ Radio","Haute Gironde","Le Dauphin","La Voix du Nord","MaCommune.info",
                   "Le Berry","Nice Matin","Republican","Actu17","InsideNews","Yahoo","Marseille",
-                  "Bordeaux","- Sud Ouest"]
+                  "Bordeaux","- Sud Ouest","Nice matin","L'Ardennais","Ardennais","DH Les Sports",
+                  "La Presse de la Manche","Flandres","aufeminin","Est R","Plein Air","Chasse Passion",
+                  "AUNIS TV","L'essentiel","Gerardmer","Lorrain"]
 
 filtered_urls = filtered_urls + used_urls
 
@@ -200,7 +202,8 @@ filtered_words = ["Boston.com","FOX","KTLA","KPRC","New York","Times of India","
                   "Pasadena","WJHG","Spectrum News 1","San Francisco","Davis Enterprise","KAIT",
                   "West Palm","York Daily Record","WHP Harrisburg","The News Leader","New Orleans",
                   "Suffolk Times","Deltaplex News","Modesto","KFVS","Arizona","Hudson","KSBY",
-                  "Amarillo","WSMV","PennLive","Western Mass","Koam"]
+                  "Amarillo","WSMV","PennLive","Western Mass","Koam","USA TODAY","MLive.com",
+                  "Cincinnati","Cumbria Crack", "Surrey Live"]
 #filtered_urls = filtered_urls + used_urls
 
 rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
