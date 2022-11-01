@@ -162,7 +162,7 @@ filtered_words = ["France", ".fr",".re","7sur7","Var-matin","Alsace","Martinique
                   "Le Berry","Nice Matin","Republican","Actu17","InsideNews","Yahoo","Marseille",
                   "Bordeaux","- Sud Ouest","Nice matin","L'Ardennais","Ardennais","DH Les Sports",
                   "La Presse de la Manche","Flandres","aufeminin","Est R","Plein Air","Chasse Passion",
-                  "AUNIS TV","L'essentiel","Gerardmer","Lorrain","Gedour"]
+                  "AUNIS TV","L'essentiel","Gerardmer","Lorrain","Gedour","Hebdo","La Nouvelle"]
 
 filtered_urls = filtered_urls + used_urls
 

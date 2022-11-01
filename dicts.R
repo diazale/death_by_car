@@ -83,6 +83,7 @@ vehicle_types[["street sweeper"]] <- "Other"
 vehicle_types[["excavator"]] <- "Other"
 vehicle_types[["logging truck"]] <- "Large truck"
 vehicle_types[["semi-truck"]] <- "Large truck"
+vehicle_types[["front loader"]] <- "Other"
 
 ##### Age groups #####
 # Age group (Under or Over 18)
