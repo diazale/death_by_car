@@ -810,7 +810,6 @@
 "1089","1","","","","dead","crossing",""
 "1090","1","F","42","","life-threatening injury","road",""
 "1091","1","F","","40s","serious injury","intersection","hospitalized"
-"1092","1","","","","non-life-threatening injury","crosswalk",""
 "1094","1","","","","serious injury","","University District"
 "1095","1","","","","dead","",""
 "1096","1","M","","adult","non-life-threatening injury","intersection",""
@@ -865,3 +864,4 @@
 "1162","1","","","","unknown injury","",""
 "1164","1","F","","adult","taken to hospital with injury","",""
 "1165","1","","","","life-threatening injury","intersection",""
+"1167","1","F","36","","dead","",""
