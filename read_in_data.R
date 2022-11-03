@@ -13,6 +13,8 @@ cyclists <- read_csv("data/cyclists", col_names = TRUE,
                        col_character() # notes
                      ))
 
+cyclists$sex <- factor(cyclists$sex, levels=c('M', 'F', ''))
+
 pedestrians <- read_csv("data/pedestrians", col_names = TRUE,
                         col_types = cols(
                           col_double(), # incident ID
@@ -25,6 +27,8 @@ pedestrians <- read_csv("data/pedestrians", col_names = TRUE,
                           col_character() # notes
                         ))
 
+pedestrians$sex <- factor(pedestrians$sex, levels=c('M', 'F', ''))
+
 others <- read_csv("data/other", col_names = TRUE,
                    col_types = cols(
                      col_double(), # incident ID
@@ -36,6 +40,8 @@ others <- read_csv("data/other", col_names = TRUE,
                      col_character(), # location
                      col_character() # notes
                    ))
+
+others$sex <- factor(others$sex, levels=c('M', 'F', ''))
 
 incidents <- read_csv("data/incidents", col_names = TRUE,
                       col_types = cols(
@@ -75,6 +81,36 @@ vehicles <- read_csv("data/vehicles", col_names = TRUE,
                        col_character() # notes
                      ))
 
-in_vehicles <- read.csv("data/in_vehicles")
-structures <- read.csv("data/structures")
-sources <- read.csv("data/sources")
+in_vehicles <- read_csv("data/in_vehicles", col_names = TRUE,
+                        col_types = cols(
+                          col_double(), # incident ID
+                          col_double(), # vehicle ID
+                          col_double(), # in_vehicle ID
+                          col_double(), # driver flag
+                          col_factor(), # sex
+                          col_double(), # age
+                          col_character(), # age rage
+                          col_factor(), # injury status
+                          col_character(), # location
+                          col_character() #notes
+                        ))
+
+
+in_vehicles$sex <- factor(in_vehicles$sex, levels=c('M', 'F', ''))
+
+structures <- read_csv("data/structures", col_names = TRUE,
+                       col_types = cols(
+                         col_double(), # incident ID
+                         col_double(), # structure ID
+                         col_factor(), # structure type
+                         col_factor(), # structure status
+                         col_character() # notes
+                       ))
+
+sources <- read_csv("data/sources", col_names = TRUE,
+                    col_types = cols(
+                      col_double(), # incident ID
+                      col_character(), # url
+                      col_character(), # archive url
+                      col_character() # notes
+                    ))
