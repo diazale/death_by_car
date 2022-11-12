@@ -32,6 +32,7 @@
 "316","1","F","","","dead","highway",""
 "322","1","M","40","","minor injury","indoors, home",""
 "322","1","F","","","uninjured","indoors, home",""
+"344","1","M","","adult","uninjured","indoors, home","displaced, home damaged"
 "359","1","","","","","","police officer"
 "362","1","","","","non-life-threatening injury","road","police officer"
 "362","2","","","","taken to hospital with injury","road","construction worker"
