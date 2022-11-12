@@ -149,3 +149,5 @@
 "1174","1","","","","minor injury","construction side","construction worker"
 "1184","1","","","youth","non-life-threatening injury","highway","ATV, impaired"
 "1204","1","M","24","","serious injury","farm","tractor"
+"1224","1","M","19","","critical injury","highway","stepped out of vehicle after crash"
+"1224","2","","","","uninjured","highway","stepped out of vehicle after crash, near miss"
