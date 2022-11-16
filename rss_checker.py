@@ -2,6 +2,8 @@
 This script checks lists of RSS feeds against keywords thought to highlight cyclist/pedestrian incidents.
 """
 
+# TODO: move whitelist/blacklist to txt
+
 from csv import writer
 from datetime import datetime
 import feedparser
