@@ -545,3 +545,6 @@
 "1240","1","2","0","","","","uninjured","","police officer"
 "1245","1","1","1","","","","uninjured","","ticketed for failing to yield"
 "1246","1","1","1","M","50","","uninjured","","charged with failing to remain"
+"1255","1","1","1","M","23","","uninjured","","pulled over and provided medical assistance"
+"1256","1","1","1","","","","minor injury","","medical incident, crashed into building"
+"1257","1","1","1","M","70","","uninjured","","ticketed for failing to yield to pedestrian in crosswalk, immediately got out of car and said he did not see victim"

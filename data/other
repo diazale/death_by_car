@@ -153,3 +153,5 @@
 "1224","1","M","19","","critical injury","highway","stepped out of vehicle after crash"
 "1224","2","","","","uninjured","highway","stepped out of vehicle after crash, near miss"
 "1237","1","","","adult","non-life-threatening injury","construction site","at work, flagger"
+"1255","1","M","29","","dead","roadside","stepped out of vehicle, waiting for roadside assistance"
+"1255","2","M","25","","serious injury","roadside","stepped out of vehicle, waiting for roadside assistance"
