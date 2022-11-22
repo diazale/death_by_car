@@ -144,3 +144,5 @@
 "1215","1","","damaged","gas leak, building evacuated"
 "1242","1","non-residential","damaged","barn, wall and window damaged"
 "1256","1","non-residential","heavily damaged","barn, large hole in wall"
+"1263","1","non-residential","damaged","hospital Tower D, no structural damage"
+"1264","1","residential","destroyed","cannot be repaired"
