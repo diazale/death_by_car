@@ -1129,7 +1129,6 @@
 "1098","1","pickup truck","","","","","fled the scene"
 "1099","1","","","","","",""
 "1100","1","transport truck","","","","1",""
-"1101","1","","","","","",""
 "1102","1","","","","","",""
 "1103","1","bus","","","","1","school bus"
 "1104","1","transport truck","","","","1","semi"
@@ -1328,4 +1327,4 @@
 "1283","2","SUV","","","","","hit first victim and second victim, fled the scene"
 "1283","3","","","","","","hit first and second victim"
 "1284","1","","","","","1","taxi"
-"1285","1","","","","","",""
+"1285","1","","","","","","turned left into victim, did not see victim"
