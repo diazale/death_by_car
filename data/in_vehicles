@@ -583,3 +583,6 @@
 "1305","1","1","1","M","66","","minor injury","",""
 "1308","1","1","1","F","80","","uninjured","","did not see pedestrian"
 "1308","1","2","0","F","88","","uninjured","",""
+"1315","1","1","1","M","83","","uninjured","","driving same direction as cyclist"
+"1316","1","1","1","M","22","","uninjured","","impaired"
+"1317","1","1","1","M","30","","uninjured","","shock"
