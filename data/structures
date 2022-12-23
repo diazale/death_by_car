@@ -154,3 +154,7 @@
 "1349","1","residential","damaged","fence and yard damaged"
 "1351","1","","damaged","unspecified building"
 "1375","1","non-residential","heavily damaged","mall entrance and storefront window"
+"1383","1","residential","damaged","unclear damage"
+"1383","2","residential","damaged","unclear damage"
+"1383","3","residential","damaged","unclear damage"
+"1385","1","residential","heavily damaged","porch destroyed, front window and door damaged"
