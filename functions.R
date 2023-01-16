@@ -15,7 +15,7 @@ filter_incidents <- function(data_, incident_ids_){
   return(subset(data_, incident_id %in% incident_ids_))
 }
 
-subset_by_date <- function(data_, min_date_=NA, max_date_=NA){
+subset_by_date <- function(data_, max_date_=NA, min_date_=NA){
   # Given a min and max date, return all incidents between them (inclusive)
   # If only one of min or max is provided, return the data after/before the date
   # min_date/max_date: character in format YYYY-MM-DD
