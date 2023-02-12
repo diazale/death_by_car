@@ -177,7 +177,7 @@
 "1512","1","","","adult","uninjured","indoors, home","asleep"
 "1519","1","","","","uninjured","indoors, home",""
 "1523","1","M","67","","life-threatening injury","road","hit by own unoccupied vehicle after being involved in two-car collision where other driver fled and talking to him"
-"1524","1","","4","","dead","indoors, daycare",""
+"1524","1","M","4","","dead","indoors, daycare",""
 "1524","2","","4","","dead","indoors, daycare",""
 "1524","3","M","4","between 3 and 5","taken to hospital with injury","indoors, daycare",""
 "1524","4","M","4","between 3 and 5","taken to hospital with injury","indoors, daycare",""
@@ -186,3 +186,4 @@
 "1524","7","","4","between 3 and 5","taken to hospital with injury","indoors, daycare",""
 "1524","8","","4","between 3 and 5","taken to hospital with injury","indoors, daycare",""
 "1531","1","F","","adult","uninjured","indoors, home","displaced"
+"1542","1","M","38","","life-threatening injury","construction site","construction worker"
