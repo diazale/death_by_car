@@ -722,3 +722,5 @@
 "1561","1","1","1","M","38","","uninjured","",""
 "1575","1","1","1","","","","","","medical incident"
 "1577","1","1","1","","","","uninjured","","treated in ambulance for nervous shock"
+"1581","1","1","1","M","32","","taken to hospital with injury","","injuries described as minor"
+"1581","1","2","0","M","22","","taken to hospital with injury","","injuries described as minor"
