@@ -722,6 +722,7 @@
 "1556","1","1","1","F","25","","uninjured","","mistook gas for brake"
 "1560","1","1","1","","","","uninjured","",""
 "1561","1","1","1","M","38","","uninjured","",""
+"1565","1","1","1","M","71","","uninjured","","charged with careless driving causing bodily harm and failing to surrender license"
 "1575","1","1","1","","","","","","medical incident"
 "1577","1","1","1","","","","uninjured","","treated in ambulance for nervous shock"
 "1581","1","1","1","M","32","","taken to hospital with injury","","injuries described as minor"
@@ -730,3 +731,5 @@
 "1585","1","1","1","","","","uninjured","","ticketed for failing to yield to a pedestrian in a crosswalk"
 "1589","1","1","1","M","27","","","","appeared impaired, arrested, charged"
 "1590","1","1","1","F","47","","","","impaired, charged"
+"1598","1","1","1","M","65","","critical injury","",""
+"1601","1","1","1","F","28","","uninjured","","told surviving victim to call 911, drove away and returned"
