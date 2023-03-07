@@ -1683,3 +1683,8 @@
 "1621","1","SUV","","","","","hit building after hitting pickup truck"
 "1621","2","pickup truck","Ford","","","",""
 "1622","1","truck","","","","",""
+"1623","1","dump truck","","","","1",""
+"1624","1","SUV","Jeep","","","",""
+"1625","1","cube truck","","","","1","FedEx vehicle"
+"1626","1","pickup truck","Chevrolet","Silverado","","","deliberate, getaway vehicle, used to strike pedestrian witness after vehicle 1 was used to ram building, fled the scene"
+"1626","2","large truck","","","","","utility truck, deliberate, rammed building for robbery"
