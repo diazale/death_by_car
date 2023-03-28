@@ -773,3 +773,7 @@
 "1667","1","1","1","M","","adult","serious injury","","impaired, charged"
 "1668","1","1","1","M","36","","uninjured","","charged with dangerous driving and stunt driving, failed a driving test and started driving aggressively, road rage"
 "1669","1","1","1","","","","","","arrested, speeding"
+"1675","1","1","1","F","","","minor injury","","treated at scene"
+"1675","1","2","0","","","","uninjured","",""
+"1675","2","1","1","M","","","uninjured","","ran stop sign and hit vehicle 1"
+"1677","1","1","1","M","","20s","uninjured","","lost control of vehicle and hit a house"
