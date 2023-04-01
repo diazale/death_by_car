@@ -34,6 +34,36 @@ subset_by_date <- function(data_, max_date_=NA, min_date_=NA){
   }
 }
 
+#' Get IDs of all incidents between an inclusive date range
+#' If no start date is provided, get everything before the end date
+#' If no end date is provided, get everything after the start date
+#'
+#' @param data_ Input data
+#' @param start_date_ YYYY-MM-DD character
+#' @param end_date_ YYYY-MM-DD character
+#'
+#' @return Vector of incident_id values between the date range, inclusive
+#'
+#' @examples
+#' winter_incident_ids <- incident_id_by_date(incidents, "2022-12-21","2023-03-20")
+#' after_spring_incident_ids <- incident_id_by_date(incidents, start_date_="2023-03-20")
+incident_id_by_date <- function(data_, start_date_=NA, end_date_=NA){
+  
+  # Subset the incidents by the dates desired
+  if (!is.na(end_date_) & !is.na(start_date_)){
+    # Both min and max dates provided, give all data between.
+    temp_data_ <- subset(data_, lubridate::ymd(start_date_) <= date & date <= lubridate::ymd(end_date_))
+  } else if (is.na(end_date_)){
+    # No end date: give everything after the start date
+    temp_data_ <- subset(data_, lubridate::ymd(start_date_) <= date)
+  } else if (is.na(start_date_)){
+    # No start date: give everything before the end date
+    temp_data_ <- subset(data_, date <= lubridate::ymd(end_date_))
+  }
+  
+  return(temp_data_$incident_id)
+}
+
 group_ages <- function(in_data){
   # Given a data frame with columns for age or approximate age (age_range), give an age group
   # This uses the vector age_ranges, defined in dicts.R
