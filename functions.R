@@ -47,7 +47,7 @@ subset_by_date <- function(data_, max_date_=NA, min_date_=NA){
 #' @examples
 #' winter_incident_ids <- incident_id_by_date(incidents, "2022-12-21","2023-03-20")
 #' after_spring_incident_ids <- incident_id_by_date(incidents, start_date_="2023-03-20")
-incident_id_by_date <- function(data_, start_date_=NA, end_date_=NA){
+incident_ids_by_date <- function(data_, start_date_=NA, end_date_=NA){
   
   # Subset the incidents by the dates desired
   if (!is.na(end_date_) & !is.na(start_date_)){
