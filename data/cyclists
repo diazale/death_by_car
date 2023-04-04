@@ -276,3 +276,7 @@
 "1650","1","M","","","life-threatening injury","road","hit by mirror"
 "1655","1","M","","50s","serious injury","intersection",""
 "1672","1","M","","","taken to hospital with injury","intersection","injury described as minor"
+"1695","1","M","","adult","taken to hospital with injury","road","cycling in group"
+"1695","2","M","","adult","taken to hospital with injury","road","cycling in group"
+"1695","3","M","","adult","uninjured","road","near miss, cycling with group"
+"1696","1","M","40","","non-life-threatening injury","intersection","taken to trauma centre"
