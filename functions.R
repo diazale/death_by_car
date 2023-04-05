@@ -38,7 +38,7 @@ subset_by_date <- function(data_, max_date_=NA, min_date_=NA){
 #' If no start date is provided, get everything before the end date
 #' If no end date is provided, get everything after the start date
 #'
-#' @param data_ Input data
+#' @param data_ Data frame/tibble, Input data
 #' @param start_date_ YYYY-MM-DD character
 #' @param end_date_ YYYY-MM-DD character
 #'
@@ -63,6 +63,37 @@ incident_ids_by_date <- function(data_, start_date_=NA, end_date_=NA){
   
   return(temp_data_$incident_id)
 }
+
+
+#' incident_ids_by_variable
+#'
+#' @param data_ Data frame/tibble, input data (incidents)
+#' @param variable_ Character, column name
+#' @param value_ Character, value to filter by
+#'
+#' @return Vector of incident IDs
+#'
+#' @examples toronto_ids <- incident_ids_by_variable(incidents, "region","Toronto")
+#' @exmaples quebec_ids <- incident_ids_by_variable(incidents, "province","QC")
+incident_ids_by_variable <- function(data_, variable_, value_){
+  return(data_[data_[[variable_]]==value_,]$incident_id)
+}
+
+#' incident_ids_by_substring
+#'
+#' @param data_ Data frame/tibble, input data
+#' @param variable_ Character, column name to use
+#' @param substring_ Substring to search
+#'
+#' @return Vector of incident IDs
+#'
+#' @examples
+incident_ids_by_substring <- function(data_, variable_, substring_){
+  return(data_[grepl(substring_, data_[[variable_]]),]$incident_id)
+  
+}
+
+incidents[incident_ids_by_substring(incidents, "location", "Park"),]
 
 group_ages <- function(in_data){
   # Given a data frame with columns for age or approximate age (age_range), give an age group
