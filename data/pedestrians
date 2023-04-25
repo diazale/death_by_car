@@ -1121,7 +1121,7 @@
 "1466","1","","","","non-life-threatening injury","intersection",""
 "1467","1","","","","unknown injury","highway",""
 "1468","1","M","66","","dead","crosswalk",""
-"1468","2","F","62","","life-threatening injury","crosswalk",""
+"1468","2","F","62","","life-threatening injury","crosswalk","still in hospital four months later"
 "1469","1","F","39","","taken to hospital with injury","crosswalk",""
 "1470","1","F","","adult","non-life-threatening injury","crosswalk","crossing guard returning from escorting child"
 "1471","1","M","","adult","taken to hospital with injury","crossing",""
@@ -1372,3 +1372,4 @@
 "1757","1","M","27","","serious injury","intersection",""
 "1762","1","M","75","","dead","shoulder",""
 "1763","1","M","12","","taken to hospital with injury","",""
+"1764","1","F","82","","dead","parking lot",""
