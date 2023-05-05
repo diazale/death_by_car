@@ -1386,3 +1386,8 @@
 "1777","1","F","","","minor injury","","jogger, part of a group"
 "1778","1","","","","dead","intersection",""
 "1780","1","F","","20s","minor injury","intersection",""
+"1781","1","M","35","","non-life-threatening injury","road","victim of road rage"
+"1782","1","M","","","critical injury","intersection","in hospital four days later"
+"1783","1","","","","serious injury","intersection","taken to hospital"
+"1785","1","F","8","","dead","parking lot","hit at the entrance to a school parking lot, died in hospital"
+"1786","1","M","","adult","serious injury","road","found lying on the road, presumed to have been hit by a driver"
