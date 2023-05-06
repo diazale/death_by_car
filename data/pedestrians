@@ -1373,7 +1373,7 @@
 "1762","1","M","75","","dead","shoulder",""
 "1763","1","M","12","","taken to hospital with injury","",""
 "1764","1","F","82","","dead","parking lot",""
-"1765","1","M","","elderly","critical injury","sidewalk","waiting to cross the street when an out of control driver hit him"
+"1765","1","M","","elderly","dead","sidewalk","waiting to cross the street when an out of control driver hit him, died in hospital next day"
 "1765","2","M","","adult","uninjured","sidewalk","near miss, witnessed crash and delivered first aid"
 "1766","1","F","53","","dead","intersection","died in hospital"
 "1767","1","","","","non-life-threatening injury","intersection",""
@@ -1394,3 +1394,4 @@
 "1788","1","M","40","","critical injury","crossing",""
 "1790","1","","20","","non-life-threatening injury","crosswalk",""
 "1791","1","M","66","","life-threatening injury","crossing",""
+"1792","1","M","30","","taken to hospital with injury","car wash","no fixed address"
