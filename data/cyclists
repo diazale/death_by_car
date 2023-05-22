@@ -299,3 +299,6 @@
 "1800","1","","","","serious injury","intersection","hit by vehicle turning right"
 "1824","1","M","70","","critical injury","intersection","taken to trauma centre"
 "1825","1","F","16","","critical injury","intersection","head trauma, multiple fractures"
+"1835","1","M","43","","dead","road","dead at scene"
+"1841","1","M","81","","dead","road","died in hospital"
+"1844","1","","","child","uninjured","","near miss"
