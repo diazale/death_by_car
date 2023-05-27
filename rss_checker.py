@@ -59,7 +59,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ['26 May']
+valid_dates = ['26 May','27 May']
 
 # Search for stories from selected RSS feeds
 if specific_news:
