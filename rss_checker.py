@@ -59,7 +59,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ['30 May','31 May']
+valid_dates = ['3 Jun']
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -206,7 +206,8 @@ filtered_words = ["Boston.com","FOX","KTLA","KPRC","New York","Times of India","
                   "West Palm","York Daily Record","WHP Harrisburg","The News Leader","New Orleans",
                   "Suffolk Times","Deltaplex News","Modesto","KFVS","Arizona","Hudson","KSBY",
                   "Amarillo","WSMV","PennLive","Western Mass","Koam","USA TODAY","MLive.com",
-                  "Cincinnati","Cumbria Crack", "Surrey Live","Patriot Ledger","bbc.com",".ie"]
+                  "Cincinnati","Cumbria Crack", "Surrey Live","Patriot Ledger","bbc.com",".ie",
+                  "Yahoo Canada Sports"]
 #filtered_urls = filtered_urls + used_urls
 
 rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=en-CA&gl=CA&ceid=CA:en"
