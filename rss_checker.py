@@ -22,21 +22,24 @@ feeds_to_check = {
      "Radio-Canada":"radio_canada_rss.txt",
      "Global":"global_rss.txt",
      "CTV":"ctvnews_rss.txt",
-     "QC":"quebec_fixed_rss.txt",
-     "Nitter_fr":"nitter_fr_rss.txt",
-     "Nitter_en":"nitter_en_rss.txt"
+     "QC":"quebec_fixed_rss.txt"
+    #,
+    # "Nitter_fr":"nitter_fr_rss.txt",
+    # "Nitter_en":"nitter_en_rss.txt"
 }
 feeds_to_check_en = {
     "CBC":"cbc_rss.txt",
     "Global":"global_rss.txt",
-    "CTV":"ctvnews_rss.txt",
-    "Nitter_en":"nitter_en_rss.txt"
+    "CTV":"ctvnews_rss.txt"
+    #,
+    #"Nitter_en":"nitter_en_rss.txt"
 }
 
 feeds_to_check_fr = {
     "Radio-Canada":"radio_canada_rss.txt",
-    "QC":"quebec_fixed_rss.txt",
-    "Nitter_fr":"nitter_fr_rss.txt"
+    "QC":"quebec_fixed_rss.txt"
+    #,
+    #"Nitter_fr":"nitter_fr_rss.txt"
 }
 
 # Import keywords as a list
@@ -59,7 +62,7 @@ google_french = True
 google_english = True
 
 # filter for the google search
-valid_dates = ['22 Jun','23 Jun','24 Jun','25 Jun']
+valid_dates = ['29 Jun','30 Jun','1 Jul']
 
 # Search for stories from selected RSS feeds
 if specific_news:
