@@ -22,24 +22,21 @@ feeds_to_check = {
      "Radio-Canada":"radio_canada_rss.txt",
      "Global":"global_rss.txt",
      "CTV":"ctvnews_rss.txt",
-     "QC":"quebec_fixed_rss.txt"
-    #,
-    # "Nitter_fr":"nitter_fr_rss.txt",
-    # "Nitter_en":"nitter_en_rss.txt"
+     "QC":"quebec_fixed_rss.txt",
+     "Nitter_fr":"nitter_fr_rss.txt",
+     "Nitter_en":"nitter_en_rss.txt"
 }
 feeds_to_check_en = {
     "CBC":"cbc_rss.txt",
     "Global":"global_rss.txt",
-    "CTV":"ctvnews_rss.txt"
-    #,
-    #"Nitter_en":"nitter_en_rss.txt"
+    "CTV":"ctvnews_rss.txt",
+    "Nitter_en":"nitter_en_rss.txt"
 }
 
 feeds_to_check_fr = {
     "Radio-Canada":"radio_canada_rss.txt",
-    "QC":"quebec_fixed_rss.txt"
-    #,
-    #"Nitter_fr":"nitter_fr_rss.txt"
+    "QC":"quebec_fixed_rss.txt",
+    "Nitter_fr":"nitter_fr_rss.txt"
 }
 
 # Import keywords as a list
@@ -61,8 +58,33 @@ specific_news = True
 google_french = True
 google_english = True
 
+# Flag for if twitter's ceo has done something stupid to break the product recently
+# If true, skip twitter feeds
+# If false, use the twitter feeds
+twitter_nonsense = True
+
+if twitter_nonsense:
+    feeds_to_check = {
+        "CBC": "cbc_rss.txt",
+        "Radio-Canada": "radio_canada_rss.txt",
+        "Global": "global_rss.txt",
+        "CTV": "ctvnews_rss.txt",
+        "QC": "quebec_fixed_rss.txt"
+    }
+    feeds_to_check_en = {
+        "CBC": "cbc_rss.txt",
+        "Global": "global_rss.txt",
+        "CTV": "ctvnews_rss.txt"
+    }
+
+    feeds_to_check_fr = {
+        "Radio-Canada": "radio_canada_rss.txt",
+        "QC": "quebec_fixed_rss.txt"
+    }
+
+
 # filter for the google search
-valid_dates = ['29 Jun','30 Jun','1 Jul']
+valid_dates = ['1 Jul','2 Jul','3 Jul','4 Jul']
 
 # Search for stories from selected RSS feeds
 if specific_news:
