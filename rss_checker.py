@@ -61,7 +61,7 @@ google_english = True
 # Flag for if twitter's ceo has done something stupid to break the product recently
 # If true, skip twitter feeds
 # If false, use the twitter feeds
-twitter_nonsense = True
+twitter_nonsense = False
 
 if twitter_nonsense:
     feeds_to_check = {
@@ -84,7 +84,7 @@ if twitter_nonsense:
 
 
 # filter for the google search
-valid_dates = ['1 Jul','2 Jul','3 Jul','4 Jul']
+valid_dates = ['12 Jul','13 Jul','14 Jul','15 Jul','16 Jul']
 
 # Search for stories from selected RSS feeds
 if specific_news:
