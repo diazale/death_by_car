@@ -106,7 +106,7 @@
 "535","1","M","17","","minor injury","road",""
 "538","1","M","","","serious injury","road",""
 "541","1","M","74","","serious injury","road","hit by mirror"
-"544","1","","","","dead","road",""
+"544","1","M","52","","dead","road","father of 8, grandfather of 8, hit from behind "
 "545","1","M","61","","taken to hospital with injury","road","charged with running red light"
 "553","1","F","45","","dead","traffic circle",""
 "554","1","","","adult","non-life-threatening injury","intersection",""
@@ -346,3 +346,4 @@
 "2017","1","M","","adult","serious injury","intersection","hit after going through red, taken to trauma centre with fracture to arm and abrasions to head"
 "2018","1","M","63","","critical injury","crossing","crossing at red light when he was hit and thrown onto road"
 "2021","1","","","","serious injury","intersection","broken ankle"
+"2031","1","M","84","","life-threatening injury","intersection","found lying in a drainage ditch"
