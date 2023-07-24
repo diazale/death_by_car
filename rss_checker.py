@@ -84,7 +84,7 @@ if twitter_nonsense:
 
 
 # filter for the google search
-valid_dates = ['18 Jul','19 Jul']
+valid_dates = ['19 Jul','20 Jul','21 Jul','22 Jul','23 Jul']
 
 # Search for stories from selected RSS feeds
 if specific_news:
