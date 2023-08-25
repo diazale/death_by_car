@@ -376,6 +376,7 @@
 "865","1","1","1","F","","60s","taken to hospital with injury","",""
 "870","1","1","1","M","","adult","minor injury","","charged, impaired, BAC of 80 plus"
 "872","1","1","1","","","","uninjured","","shock, repeat offender"
+"874","1","1","1","","","adult","uninjured","","police officer, recommended for charges by SIU a year later"
 "876","1","1","1","","","","minor injury","","mixed up gas and brake, possibly student driver"
 "876","1","2","0","","","","minor injury","",""
 "877","1","1","1","","","","uninjured","","charged"
@@ -977,3 +978,4 @@
 "2051","1","1","1","M","21","","minor injury","","arrested, charged"
 "2052","1","1","1","F","","adult","unspecified injury","","declined medical treatment"
 "2053","1","1","1","M","","","uninjured","","exited vehicle and approached victim before fleeing the scene"
+"2064","1","1","1","","52","","uninjured","","charged with careless driving causing bodily harm"
