@@ -258,3 +258,7 @@
 "2047","1","residential","heavily damaged","fence destroyed, car drove through front door"
 "2051","1","residential","heavily damaged","front of house significantly damaged, power and gas shut off, required structural engineer visit"
 "2052","1","non-residential","heavily damaged","chain link fence knocked down, several windows shattered"
+"2073","1","residential","heavily damaged","porch, front damaged"
+"2073","2","residential","heavily damaged","porch, front damaged"
+"2073","3","residential","heavily damaged","porch, front damaged"
+"2074","3","non-residential","heavily damaged","Hydro Quebec building"
