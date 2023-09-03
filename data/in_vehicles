@@ -191,7 +191,7 @@
 "476","1","1","1","F","","","uninjured","","charged, impaired"
 "479","1","1","1","F","59","","","","charged, impaired"
 "481","1","1","1","M","39","","uninjured","",""
-"483","1","1","1","M","22","","serious injury","","charged"
+"483","1","1","1","M","22","","serious injury","","impaired, charged, convicted, sentenced to 6 years in prison"
 "487","1","1","1","M","25","","uninjured","","charged"
 "489","1","1","1","M","47","","","","charged, impaired"
 "490","1","1","1","M","32","","uninjured","","arrested, charged"
@@ -1022,3 +1022,4 @@
 "2144","1","1","1","","","","uninjured","",""
 "2145","1","1","1","F","","adult","uninjured","","impaired, suspended licence, arrested and charged with numerous offences"
 "2146","1","1","1","M","76","","uninjured","","charged with failing to yield to a pedestrian"
+"2155","1","1","1","M","","adult","uninjured","","deliberate, City of Toronto worker"
