@@ -363,7 +363,7 @@
 "2079","1","F","","child","dead","","young girl, died in hospital"
 "2086","1","","","","taken to hospital with injury","",""
 "2087","1","M","","40s","critical injury","road","bike ""came in contact with the car"""
-"2088","1","","","","taken to hospital with injury","crossing",""
+"2088","1","M","","60s","dead","crossing","died two weeks later"
 "2089","1","","","","taken to hospital with injury","road","hit deliberately, injury described as minor"
 "2090","1","M","","","critical injury","road","stabilized in hospital"
 "2091","1","M","76","","serious injury","","airlifted to hospital"
@@ -375,3 +375,4 @@
 "2131","1","","50","","non-life-threatening injury","road",""
 "2138","1","M","","20s","serious injury","parking lot","taken to trauma centre"
 "2139","1","","","","serious injury","road","airlifted to hospital"
+"2147","1","","","","taken to hospital with injury","intersection","injuries described as minor"
