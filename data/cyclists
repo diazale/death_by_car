@@ -382,3 +382,6 @@
 "2171","1","M","24","","critical injury","intersection",""
 "2172","1","","29","","non-life-threatening injury","",""
 "2173","1","M","7","","dead","","died in hospital"
+"2175","1","M","","20s","life-threatening injury","intersection",""
+"2176","1","M","","adult","serious injury","road","caught under wheels of trailer, fractured tibia, torn ligaments, several other injuries"
+"2177","1","M","","adult","serious injury","road",""

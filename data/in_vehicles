@@ -967,6 +967,7 @@
 "2028","1","1","1","","","","uninjured","","in shock"
 "2032","1","1","1","M","68","","uninjured","","turned himself in next day"
 "2037","1","1","1","M","19","","uninjured","","arrested, charged with dangerous operation and failure to stay"
+"2041","1","1","1","M","","adult","","",""
 "2045","1","1","1","","","","uninjured","","taken to hospital for shock"
 "2047","1","1","1","M","","","minor injury","","possible medical incident"
 "2048","1","1","1","M","","","uninjured","",""
@@ -1028,3 +1029,5 @@
 "2164","1","1","1","M","27","","uninjured","",""
 "2168","1","1","1","F","30","","uninjured","",""
 "2170","1","1","1","M","","","dead","",""
+"2174","1","1","1","M","24","","uninjured","","impaired, charged"
+"2178","1","1","1","","","","uninjured","","taken to hospital for nervous shock"
