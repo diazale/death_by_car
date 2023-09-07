@@ -52,7 +52,7 @@ master_url_file = "data/rss_matches.csv"
 master_urls = []
 
 # If this flag is true, search my various lists of RSS feeds
-specific_news = False
+specific_news = True
 
 # Flag to check Google News
 google_french = True
@@ -61,7 +61,7 @@ google_english = True
 # Flag for if twitter's ceo has done something stupid to break the product recently
 # If true, skip twitter feeds
 # If false, use the twitter feeds
-twitter_nonsense = True
+twitter_nonsense = False
 
 if twitter_nonsense:
     feeds_to_check = {
@@ -84,7 +84,7 @@ if twitter_nonsense:
 
 
 # filter for the google search
-valid_dates = ['24 Jul','25 Jul','26 Jul']
+valid_dates = ['4 Sep','5 Sep','6 Sep','7 Sep']
 
 # Search for stories from selected RSS feeds
 if specific_news:
