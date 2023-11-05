@@ -275,3 +275,8 @@
 "2219","1","M","","adult","uninjured","indoors, restaurant","near miss, was sitting at the bar"
 "2224","1","M","","adult","serious injury","roadside","police officer, hit while running after suspect"
 "2238","1","M","63","","dead","construction site","pinned by heavy truck while refuelling tractor"
+"2252","1","","","","uninjured","indoors, home","asleep, displaced"
+"2252","2","","","","uninjured","indoors, home","asleep, displaced"
+"2252","3","","","","uninjured","indoors, home","asleep, displaced"
+"2252","4","","","","uninjured","indoors, home","asleep, displaced"
+"2252","5","","","","uninjured","indoors, home","asleep, displaced"

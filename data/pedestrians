@@ -1728,3 +1728,8 @@
 "2241","1","","","","taken to hospital with injury","crossing",""
 "2241","2","","","","taken to hospital with injury","crossing",""
 "2242","1","F","21","","dead","crossing","University of Calgary undergraduate student studying computer science"
+"2244","1","M","31","","serious injury","intersection","taken to out-of-region hospital"
+"2245","1","F","","60s","dead","road",""
+"2246","1","M","","70s","dead","crossing",""
+"2249","1","","15","","serious injury","crossing","airlifted to out-of-region hospital"
+"2251","1","M","48","","dead","crossing",""
