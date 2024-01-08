@@ -52,7 +52,7 @@ master_url_file = "data/rss_matches.csv"
 master_urls = []
 
 # If this flag is true, search my various lists of RSS feeds
-specific_news = True
+specific_news = False
 
 # Flag to check Google News
 google_french = True
@@ -61,7 +61,7 @@ google_english = True
 # Flag for if twitter's ceo has done something stupid to break the product recently
 # If true, skip twitter feeds
 # If false, use the twitter feeds
-twitter_nonsense = False
+twitter_nonsense = True
 
 if twitter_nonsense:
     feeds_to_check = {
@@ -84,7 +84,7 @@ if twitter_nonsense:
 
 
 # filter for the google search
-valid_dates = ['8 Sep','9 Sep','10 Sep','11 Sep']
+valid_dates = ['18 Sep','19 Sep','20 Sep','21 Sep','22 Sep','23 Sep','24 Sep']
 
 # Search for stories from selected RSS feeds
 if specific_news:
@@ -194,7 +194,8 @@ filtered_words = ["France", ".fr",".re","7sur7","Var-matin","Alsace","Martinique
 
 filtered_urls = filtered_urls + used_urls
 
-rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr&when:7d"
+#rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr&when:7d"
+rss = "https://news.google.ca/rss/search?q=" + "|".join(search_keys) + "&hl=fr-CA&gl=CA&ceid=CA:fr"
 
 if google_french:
     print("BEGINNING GOOGLE NEWS FRENCH")
@@ -213,6 +214,8 @@ if google_french:
                     print(entry["title"])
                     print(entry["link"].split("?cmp=rss")[0])
                     print(entry["published"])
+                # print(entry)
+
 
         except Exception as e1:
             print("Exception", e1, "in RSS:", rss)
@@ -254,6 +257,7 @@ if google_english:
                     print(entry["title"])
                     print(entry["link"].split("?cmp=rss")[0])
                     print(entry["published"])
+                #print(entry)
 
         except Exception as e1:
             print("Exception", e1, "in RSS:", rss)

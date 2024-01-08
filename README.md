@@ -12,6 +12,8 @@ I am tracking incidents where drivers hit (or threaten to hit) people who are ge
 
 The scope is currently limited to incidents in 2022, but as I continue filling backwards in time, I may expand it. I began this project April 25, 2022.
 
+Update: As of September 2023, I have paused data collection to carry out some analyses.
+
 ## Methodology
 
 I have a few scripts that check news feeds for keywords in English and French (which you can find in the files `keywords_en.txt` and `keywords_fr.txt`). These help me to find the most recent incidents. Otherwise, I manually crawl/search websites to focus on particular regions, time periods, etc, since these require using smaller local sources for which I have not yet created an automated process.
