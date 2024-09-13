@@ -59,6 +59,7 @@ incidents <- read_csv("data/incidents", col_names = TRUE,
                       ))
 
 # Drop notes
+incidents_unfiltered <- incidents
 incidents <- incidents[,-c(which(colnames(incidents)=="notes"))]
 
 # Add DOW

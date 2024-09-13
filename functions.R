@@ -93,6 +93,11 @@ incident_ids_by_substring <- function(data_, variable_, substring_){
   
 }
 
+# Same as above, but takes a vector of keys
+incident_ids_by_keys <- function(data_, variable_, keys_){
+  return(data_[grep(paste(keys_, collapse = "|"), data_[[variable_]]),]$incident_id)
+}
+
 incidents[incident_ids_by_substring(incidents, "location", "Park"),]
 
 group_ages <- function(in_data){
@@ -139,4 +144,9 @@ generate_subsets <- function(ids_){
               others_subs,
               in_vehicles_subs,
               structures_subs))
+}
+
+quick_sub <- function(in_, ids_){
+  # Quick subset of data based on incident ID so I don't have to keep typing it out
+  subset(in_, incident_id %in% ids_)
 }
