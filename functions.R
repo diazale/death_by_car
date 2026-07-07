@@ -116,9 +116,9 @@ group_ages <- function(in_data){
     )
   
   # If there is no age, but there is an age range (e.g. "senior"), use the named vector with its equivalencies
-  in_data$age_group <- ifelse(is.na(in_data$age_group) & !is.na(in_data$age_range), # If there is no age, but there is age_range...
+  in_data$age_group <- as.character(ifelse(is.na(in_data$age_group) & !is.na(in_data$age_range), # If there is no age, but there is age_range...
                               age_ranges[match(as.character(in_data$age_range), names(age_ranges))], # Match to age_range
-                              in_data$age_group) # Otherwise, don't do anything
+                              in_data$age_group)) # Otherwise, don't do anything
   
   return(in_data)
 }
